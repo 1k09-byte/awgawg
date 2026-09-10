@@ -1,0 +1,7275 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+    <meta charset="UTF-8"/>
+
+	
+    <title>Download Not Complete</title>
+    
+    <meta property="og:title" content="Download Not Complete"/>
+	<meta property="og:description"/>
+
+
+	<!-- es-module-shims: polyfills <script type="importmap"> on browsers
+	     without native support (iOS Safari < 16.4, older Chrome/Firefox).
+	     Must load BEFORE the importmap below. Modern browsers no-op. -->
+	<script async src="https://ga.jspm.io/npm:es-module-shims@1.10.0/dist/es-module-shims.js" crossorigin="anonymous"></script>
+	<!-- Import map for external dependencies -->
+	<script type="importmap">
+		{
+				"imports": {
+						"datatables-library": "https://download.amd.com/js/datatables-library-1.0.0.js",
+						"glide-library": "https://download.amd.com/js/glide-library-1.0.0.js",
+						"coveo-atomic-library": "https://static.cloud.coveo.com/atomic/v3.59.2/index.esm.js",
+						"coveo-headless-library": "https://static.cloud.coveo.com/headless/v3.51.3/headless.esm.js"
+				}
+		}
+	</script>
+	<!-- End import map for external dependencies -->
+
+	<meta name="keywords" content="Radeon RX"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	
+
+
+	<meta property="og:image" content="https://www.amd.com/content/dam/code/images/header/ogimage.jpg"/>
+	<meta property="og:url" content="https://www.amd.com/en/resources/support-articles/faqs/Download-Incomplete.html"/>
+	<meta property="og:updated_time" content="2026-06-08T01:19:26-0500"/>
+	<meta property="og:site_name" content="AMD"/>
+<meta property="og:type" content="website"/>
+
+	<link rel="preload" href="/etc.clientlibs/common-ui/clientlibs/clientlib-site/resources/fonts/font-awesome/webfonts/fa-sharp-solid-900.woff2" as="font" type="font/woff2" crossorigin/>
+
+	
+    <!-- Analytics and One Trust -->
+<script src="https://download.amd.com/js/analytics/aem/aem-analytics.js" type="module" defer></script>
+<!-- End Analytics and One Trust -->
+
+<!-- Marketo munchkin -->
+
+<script type="text/plain" class="optanon-category-C0002">
+	(function() {
+	  var didInit = false;
+	  function initMunchkin() {
+	    if(didInit === false) {
+	      didInit = true;
+	      Munchkin.init('885-ZYT-361', { altIds:['087-ZLC-747'] });
+	    }
+	  }
+	  var s = document.createElement('script');
+	  s.type = 'text/javascript';
+	  s.async = true;
+	  s.src = '//munchkin.marketo.net/munchkin.js';
+	  s.onreadystatechange = function() {
+	    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+	      initMunchkin();
+	    }
+	  };
+	  s.onload = initMunchkin;
+	  document.getElementsByTagName('head')[0].appendChild(s);
+	})();
+</script>
+<!-- End Marketo munchkin -->
+
+    <link rel="canonical" href="https://www.amd.com/en/resources/support-articles/faqs/Download-Incomplete.html"/>
+
+    <link rel="stylesheet" href="https://static.cloud.coveo.com/atomic/v3.59.2/themes/coveo.css"/>
+
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/common-ui/clientlibs/clientlib-base.min.css" type="text/css">
+
+
+
+
+
+
+    
+	    <meta name="analytics:brand-family" content="Radeon RX"/>
+    
+    <meta name="amd_result_type" content="Support Articles"/>
+<meta name="amd_asset_type" content="Support Articles"/>
+
+
+
+<script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://www.amd.com/en/resources/support-articles/faqs/Download-Incomplete.html#Article",
+  "url": "https://www.amd.com/en/resources/support-articles/faqs/Download-Incomplete.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.amd.com/en/resources/support-articles/faqs/Download-Incomplete.html"
+  },
+  "headline": "Download Not Complete",
+  "name": "Download Not Complete",
+  "inLanguage": "en",
+  "image": "https://www.amd.com/content/dam/code/images/header/ogimage.jpg",
+  "datePublished": "2026-06-08T11:25:56-07:00",
+  "dateModified": "2026-06-08T11:19:26-07:00",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Advanced Micro Devices (AMD)",
+    "url": "https://www.amd.com/en.html"
+  }
+}
+</script>
+    
+    
+        
+        
+   
+        
+    
+
+    
+
+    
+    <script src="/etc.clientlibs/common-ui/clientlibs/clientlib-webpack-dependencies.min.js"></script>
+
+
+    
+    <link rel="stylesheet" href="/etc.clientlibs/common-ui/clientlibs/clientlib-webpack-dependencies.min.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/common-ui/clientlibs/clientlib-webpack.min.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/user-account/clientlibs/clientlib-webpack.min.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/amd-site/clientlibs/clientlib-webpack.min.css" type="text/css">
+
+
+    
+    
+
+
+    
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/content/dam/code/images/favicon/favicon.ico"/>
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/content/dam/code/images/favicon/favicon.ico"/>
+
+    
+
+    <!-- Google reCaptcha -->
+   <script src="//www.recaptcha.net/recaptcha/enterprise.js?hl=en" async defer></script>
+
+    <!-- Qualified -->
+    
+    <!-- End Qualified -->
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("True"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="TAWHG-BBP78-83KP7-T63YA-KFJCF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"TAWHG-BBP78-83KP7-T63YA-KFJCF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="3gn2xhaccywfg2vb43xa-f-3146aca88-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"222420","ak.ai":parseInt("169576",10),"ak.ol":"0","ak.cr":12,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"2091d4eb","ak.r":46130,"ak.a2":n,"ak.m":"b","ak.n":"essl","ak.cport":61384,"ak.gh":"92.122.211.155","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1788995310","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==nxA1N1zHYK6L/t/6x4wS+0DCgVpC39bteQuDH1p+W2rnV7l6/YCKFHWeSuzS6K2ryFZsiDq8NLqc9Gf1PWVGIgS4qmr5FEfMFXN4M2PG2kSbPji92DisIuqI6tefC980VX144fv7umal71jm7T8EGuQxjKJQXZvsAkEdISjq1/j4beFIS28JRzPYcz28Pq3xv2U8f/0T4q7Mj77ab9jeOOIod1UpOTikKu4Q4sKMPiiWLNr8cY7JDRc7azMBDaSAmzPtKl53Gv73yvgvs765SaGk2ST1CrVZugBaCCbiAf5hnTAkX3t1Z5LwgQGN6SVxJ/+YMG9xw4qi0/ahk18CzzLYb6Q5MrLf4jqzsGvQrZFHVleiahHBVXzCQBhVSJz5M1oHavsi7+0GRvYw+INWDyqCShkjOLRFFUTU1EfbI3g=","ak.pv":"464","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+    <body class="page-editable-support-articles page-editable page basicpage" id="page-editable-support-articles-c80e5e1e6b" data-cmp-data-layer-enabled="false" data-and-label="and">
+
+        
+             
+	        
+		        
+	             
+	             	<div class="amd-bs5 background-white">
+		            	<a href="#" id="skipToMain">Skip to main content</a>
+		            	
+<div class="container-parsys root-flex-wrapper">
+    
+    <div id="container-e1d88d0a8d" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="helloBar parbase aem-GridColumn aem-GridColumn--default--12"></div>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+    <div id="experiencefragment-df759981a2" class="cmp-experiencefragment cmp-experiencefragment--header">
+    
+    <div id="container-5565bbbb43" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-bf374a457e" class="cmp-text">
+    <div class="visually-hidden"><a href="/en/site-notifications/accessibility-statement.html">AMD Website Accessibility Statement</a></div>
+
+</div>
+
+    
+
+
+</div>
+<div class="header aem-GridColumn aem-GridColumn--default--12"><div class="cmp-header" data-cmp-is="header" data-component="header" data-open-tab-text="opens in a new tab">
+	<noindex>
+		<header class="common-header" id="header-24d5ed4d9f">
+			<nav class="navbar navbar-expand-xl">
+				<div class="container-fluid main-nav">
+					<button class="navbar-toggler collapsed" id="nav-icon" data-tracking-information="mainMenuToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="header-logo">
+						<a class="navbar-brand" data-tracking-information="AMD Logo" href="/en.html">
+							<img src="/content/dam/code/images/header/amd-header-logo.svg" alt="AMD Logo" title="AMD Logo" width="90" class="d-inline-block align-text-top"/>
+						</a>
+					</div>
+					<div class="navbar-nav-container collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav nav-mega">
+							<li class="nav-item  dropdown">
+								
+								
+									<a data-cmp-hook-header="tab" class="nav-link top-level dropdown-toggle header-menu-links" data-tracking-information="Products" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" href="#" aria-haspopup="true" id="topNav-tab-products">Products
+										<span class="chevron-up-down-icon"></span>
+									</a>
+									<div data-cmp-hook-header="tabpanel" class="dropdown-menu mega-menu" data-tracking-information="Products" aria-labelledby="topNav-tab-products"><div id="headerMenu-c162eb056b" class="cmp-headermenu d-flex align-items-start" data-cmp-is="headermenu" data-component="headermenu" data-placeholder-text="false" data-gaming-audience-text="Gaming" data-consumer-audience-text="Consumer" data-business-audience-text="Business" data-content-creator-audience-text="Content Creator" data-shop-amd-text="Shop AMD" data-direct-buy-text="Buy Direct from AMD" data-see-all-text="View All" data-for-text="for" data-visit-store-text="Visit Store" data-open-tab-text="opens in a new tab">
+	
+	<div role="tablist" class="cmp-headermenu__tablist nav flex-column nav-pills" aria-orientation="vertical" aria-multiselectable="false">
+		
+		
+		<button role="tab" type="button" id="headerMenu-c162eb056b-item-7fd7783542-tab" class="cmp-headermenu__tab cmp-headermenu__tab--active active nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-c162eb056b-item-7fd7783542-tabpanel" aria-controls="headerMenu-c162eb056b-item-7fd7783542-tabpanel" tabindex="0" data-cmp-hook-headermenu="tab"> Processors <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-c162eb056b-item-9a5ba2c03f-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-c162eb056b-item-9a5ba2c03f-tabpanel" aria-controls="headerMenu-c162eb056b-item-9a5ba2c03f-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Accelerators <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-c162eb056b-item-a162ccaef2-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-c162eb056b-item-a162ccaef2-tabpanel" aria-controls="headerMenu-c162eb056b-item-a162ccaef2-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Graphics <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-c162eb056b-item-89a4ef27bd-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-c162eb056b-item-89a4ef27bd-tabpanel" aria-controls="headerMenu-c162eb056b-item-89a4ef27bd-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Adaptive SoCs, FPGAs, &amp; SOMs <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-c162eb056b-item-bdabeadece-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-c162eb056b-item-bdabeadece-tabpanel" aria-controls="headerMenu-c162eb056b-item-bdabeadece-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Software, Tools, &amp; Apps <span class="chevron-right-icon"></span>
+		</button>
+	</div>
+	
+	<div class="cmp-headermenu__tabcontent" id="v-pills-tabContent">
+		
+		<div id="headerMenu-c162eb056b-item-7fd7783542-tabpanel" role="tabpanel" aria-labelledby="headerMenu-c162eb056b-item-7fd7783542-tab" tabindex="0" class="cmp-headermenu__tabpanel cmp-headermenu__tabpanel--active active " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-c162eb056b-item-7fd7783542-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Processors" data-bs-toggle="collapse" href="#headerMenu-c162eb056b-item-7fd7783542-collapse" aria-expanded="false" aria-controls="headerMenu-c162eb056b-item-7fd7783542-collapse" data-cmp-hook-headermenu="accordions">
+                	Processors <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-c162eb056b-item-7fd7783542-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Processors" aria-labelledby="headerMenu-c162eb056b-item-7fd7783542-heading">
+	            
+    
+    <div id="container-4a735b8d6e" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-05c0042415" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-2995441820" class="cmp-text">
+    <h6>Server CPUs</h6>
+<ul>
+<li><a href="/en/products/processors/server/epyc.html">EPYC CPU Portfolio</a></li>
+<li><a href="/en/products/processors/server/epyc/data-center-cloud-ai.html">Data Center, Cloud &amp; AI</a></li>
+<li><a href="/en/products/processors/server/epyc/network-edge.html">Network &amp; Edge</a></li>
+<li><a href="/en/products/processors/server/epyc/small-business.html">Small Business &amp; Hosting</a></li>
+<li><a href="/en/products/specifications/server-processor.html">Server CPU Specifications</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-03b13092b2" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-b71c1bbf8e" class="cmp-text">
+    <h6>Business Systems</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/processors/laptop/ryzen-for-business.html">Ryzen PRO Laptops</a></li>
+<li><a href="https://www.amd.com/en/products/processors/ryzen-for-professionals.html">Ryzen PRO Desktops</a></li>
+<li><a href="https://www.amd.com/en/products/workstations.html">Workstations</a></li>
+<li><a href="https://www.amd.com/en/products/processors/technologies/pro-technologies.html">PRO Technologies</a></li>
+<li><a href="https://www.amd.com/en/products/processors/business-systems/ryzen-ai.html">Ryzen AI for Business</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-2a06386250" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-88a1f78c74" class="cmp-text">
+    <h6>Personal &amp; Gaming<br />
+</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/processors/laptop/ryzen.html">Ryzen Laptops</a></li>
+<li><a href="https://www.amd.com/en/products/processors/desktops/ryzen.html">Ryzen Desktops</a></li>
+<li><a href="https://www.amd.com/en/gaming/laptops/advantage-premium.html">Advantage Gaming Laptops</a></li>
+<li><a href="https://www.amd.com/en/gaming/desktops/advantage-premium.html">Advantage Gaming Desktops</a></li>
+<li><a href="https://www.amd.com/en/products/processors/handhelds/ryzen-z-series.html">Ryzen Z Series Handhelds</a></li>
+<li><a href="https://www.amd.com/en/products/processors/consumer/ryzen-ai.html">Ryzen AI for Consumer</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-4a9c74d162" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-06fa149603" class="cmp-text">
+    <h6>Embedded<br />
+</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/embedded.html">EPYC and Ryzen</a></li>
+<li><a href="/en/search/partner/embedded-partners.html">Partner Directory</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+<div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-22d88904a2" class="cmp-text">
+    <h6>Resources</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/specifications.html">Product Specifications</a></li>
+<li><a href="/en/resources/enterprise.html">Enterprise Blogs &amp; Insights</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+<div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-2e01dcb4a2" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-7b01f72e9f" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-f0ba62600a" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-968592f735" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-c162eb056b-item-9a5ba2c03f-tabpanel" role="tabpanel" aria-labelledby="headerMenu-c162eb056b-item-9a5ba2c03f-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-c162eb056b-item-9a5ba2c03f-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Accelerators" data-bs-toggle="collapse" href="#headerMenu-c162eb056b-item-9a5ba2c03f-collapse" aria-expanded="false" aria-controls="headerMenu-c162eb056b-item-9a5ba2c03f-collapse" data-cmp-hook-headermenu="accordions">
+                	Accelerators <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-c162eb056b-item-9a5ba2c03f-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Accelerators" aria-labelledby="headerMenu-c162eb056b-item-9a5ba2c03f-heading">
+	            
+    
+    <div id="container-20047ae1e0" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-e5e5310973" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-48d25afba3" class="cmp-text">
+    <h6>GPU Accelerators</h6>
+<ul>
+<li><a href="/en/products/accelerators/instinct.html">Instinct GPUs</a></li>
+<li><a href="https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&amp;f-amd_product_type=Accelerators">Documentation</a></li>
+<li><a href="https://www.amd.com/en/products/accelerators/radeon-pro.html">Cloud Graphics</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-3832178b54" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-523a537c47" class="cmp-text">
+    <h6>Adaptive Accelerators</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/accelerators/alveo.html">Alveo Data Center Accelerator Cards</a></li>
+<li><a href="https://www.amd.com/en/solutions/telco-and-networking/telco-accelerators.html">Telco Accelerator Cards</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-b2558d8e93" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-508cc0d0fb" class="cmp-text">
+    <h6>DPU Accelerators</h6>
+<ul>
+<li><a href="/en/products/data-processing-units/pensando.html">Pensando Salina</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-3b5576f811" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-731799abed" class="cmp-text">
+    <h6>Ethernet Adapters</h6>
+<ul>
+<li><a href="/en/products/network-interface-cards/pensando.html">Pensando Pollara 400</a></li>
+<li><a href="https://www.amd.com/en/products/accelerators/alveo/x3/a-x3522-p08g-pq-g.html">Alveo X3 Series</a></li>
+<li><a href="https://www.amd.com/en/products/ethernet-adapters.html">Solarflare Adapters</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+<div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-805e940009" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-f02d589f1e" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-accc585b80" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-80a65465cf" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-c162eb056b-item-a162ccaef2-tabpanel" role="tabpanel" aria-labelledby="headerMenu-c162eb056b-item-a162ccaef2-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-c162eb056b-item-a162ccaef2-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Graphics" data-bs-toggle="collapse" href="#headerMenu-c162eb056b-item-a162ccaef2-collapse" aria-expanded="false" aria-controls="headerMenu-c162eb056b-item-a162ccaef2-collapse" data-cmp-hook-headermenu="accordions">
+                	Graphics <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-c162eb056b-item-a162ccaef2-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Graphics" aria-labelledby="headerMenu-c162eb056b-item-a162ccaef2-heading">
+	            
+    
+    <div id="container-992a86b4f2" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-f9968ff63c" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-1d3bfaf1d2" class="cmp-text">
+    <h6>Workstations</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/graphics/workstations.html">Radeon PRO</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-46af6a2f2a" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-0561ca5751" class="cmp-text">
+    <h6>Desktops</h6>
+<ul>
+<li><a href="https://www.amd.com/en/gaming/desktops/advantage-premium.html">AMD Advantage Premium</a></li>
+<li><a href="https://www.amd.com/en/products/graphics/desktops/radeon.html">Radeon RX</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-66089d7488" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-f7a7804031" class="cmp-text">
+    <h6>Laptops</h6>
+<ul>
+<li><a href="https://www.amd.com/en/gaming/laptops/advantage-premium.html">AMD Advantage Premium</a></li>
+<li><a href="https://www.amd.com/en/products/graphics/laptops/radeon.html">Radeon Mobile Graphics</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-293e65e5a8" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-9df9523666" class="cmp-text">
+    <h6>Resources</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/specifications.html">Product Specifications</a><br />
+</li>
+<li><a href="https://gpuopen.com/learn/">Documentation</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-c162eb056b-item-89a4ef27bd-tabpanel" role="tabpanel" aria-labelledby="headerMenu-c162eb056b-item-89a4ef27bd-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-c162eb056b-item-89a4ef27bd-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Adaptive SoCs, FPGAs, &amp; SOMs" data-bs-toggle="collapse" href="#headerMenu-c162eb056b-item-89a4ef27bd-collapse" aria-expanded="false" aria-controls="headerMenu-c162eb056b-item-89a4ef27bd-collapse" data-cmp-hook-headermenu="accordions">
+                	Adaptive SoCs, FPGAs, &amp; SOMs <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-c162eb056b-item-89a4ef27bd-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Adaptive SoCs, FPGAs, &amp; SOMs" aria-labelledby="headerMenu-c162eb056b-item-89a4ef27bd-heading">
+	            
+    
+    <div id="container-b608a3252c" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-91a11e5766" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-26608b457b" class="cmp-text">
+    <h6>Adaptive SoCs &amp; FPGAs</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/versal.html">Versal Portfolio</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc.html">SoC Portfolio</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/fpga.html">FPGA Portfolio</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/cost-optimized-portfolio.html">Cost-Optimized Portfolio</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-d8a5712686" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-7dceea1879" class="cmp-text">
+    <h6>System-on-Modules (SOMs)</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/system-on-modules/kria.html">Kria SOMs</a></li>
+<li><a href="/en/products/system-on-modules/kria/ai.html">Kria AI Solutions</a></li>
+<li><a href="/en/products/system-on-modules/kria/k24.html">Kria K24 SOM</a></li>
+<li><a href="/en/products/system-on-modules/kria/k26.html">Kria K26 SOM</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-8269cac48e" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-2814ff17f6" class="cmp-text">
+    <h6>Technologies</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/ai-engine.html">AI Engine</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/design-security.html">Design Security</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/digital-signal-processing.html">Digital Signal Processing</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/functional-safety.html">Functional Safety</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/high-speed-serial.html">High Speed Serial</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/memory.html">Memory Solutions</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/technologies/power-efficiency.html">Power Efficiency</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-bd76c9c727" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-61e3257b4a" class="cmp-text">
+    <h6>Resources</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property.html">Intellectual Property</a></li>
+<li><a href="https://docs.amd.com/v/u/en-US/ug1776-adaptive-computing-design-hubs-lp">Design Hubs</a></li>
+<li><a href="https://www.amd.com/en/developer/browse-by-product-type/adaptive-resources.html">Developer Hub</a></li>
+<li><a href="https://learningcatalog-amd.netexam.com/">Customer Training</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+<div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-120244c356" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-4a2a130b07" class="cmp-text">
+    <h6>Evaluation Boards &amp; Kits</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/evaluation-boards.html" target="_blank">Evaluation Boards</a></li>
+<li><a href="https://www.amd.com/en/search/adaptive-socs-and-fpgas/boards.html#f-amd_product_board_type=Accessories" target="_blank">Boards &amp; Kits Accessories</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-8b04705229" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-d234d82040" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-d8f293c858" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-c162eb056b-item-bdabeadece-tabpanel" role="tabpanel" aria-labelledby="headerMenu-c162eb056b-item-bdabeadece-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-c162eb056b-item-bdabeadece-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Software, Tools, &amp; Apps" data-bs-toggle="collapse" href="#headerMenu-c162eb056b-item-bdabeadece-collapse" aria-expanded="false" aria-controls="headerMenu-c162eb056b-item-bdabeadece-collapse" data-cmp-hook-headermenu="accordions">
+                	Software, Tools, &amp; Apps <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-c162eb056b-item-bdabeadece-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Software, Tools, &amp; Apps" aria-labelledby="headerMenu-c162eb056b-item-bdabeadece-heading">
+	            
+    
+    <div id="container-35f62fbaba" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-72917d8728" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-ae54ba6be0" class="cmp-text">
+    <h6>Processor Tools</h6>
+<ul>
+<li><a href="/en/products/software/mext.html">MEXT Predictive Memory Software</a></li>
+<li><a href="/en/products/processors/technologies/pro-technologies.html">PRO Technologies</a></li>
+<li><a href="https://www.amd.com/en/products/software/ryzen-ai-software.html">Ryzen AI Software</a></li>
+<li><a href="https://www.amd.com/en/products/software/ryzen-master.html">Ryzen Master Overclocking Utility</a></li>
+<li><a href="https://www.amd.com/en/products/software/storemi.html">StoreMI</a></li>
+<li><a href="/en/developer/zen-software-studio.html">Zen Software Studio</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-d006ad8bcb" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-db0d2976a3" class="cmp-text">
+    <h6>Graphics Tools &amp; Apps</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/software/adrenalin.html">AMD Software: Adrenalin Edition</a></li>
+<li><a href="/en/products/software/pro-edition.html">AMD Software: PRO Edition</a></li>
+<li><a href="https://www.amd.com/en/products/graphics/technologies/fidelityfx.html">FidelityFX</a></li>
+<li><a href="https://www.amd.com/en/products/graphics/software/radeon-prorender.html">Radeon ProRender</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-490745d392" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-b0096cd740" class="cmp-text">
+    <h6>Adaptive SoC &amp; FPGA Tools</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas.html">Design Tools</a></li>
+<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado.html">Vivado Software</a></li>
+<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vitis.html">Vitis Software</a></li>
+<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vitis/vitis-model-composer.html">Vitis Model Composer</a></li>
+<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vitis/vitis-hls.html">Vitis HLS</a></li>
+<li><a href="https://www.amd.com/en/products/software/vitis-ai.html">Vitis AI</a></li>
+<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/embedded-software.html">Embedded Software</a></li>
+<li><a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/power-design-manager.html">Power Design Manager</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-0c67544db5" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-9676ed9a3a" class="cmp-text">
+    <h6>Intellectual Property &amp; Apps</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/intellectual-property.html">Pre-Built IP Cores</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/alveo-apps/all-apps.html">Alveo Accelerator App Store</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/kria-apps.html">Kria SOM App Store</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+<div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-dc1536d55b" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-5624edc427" class="cmp-text">
+    <h6>GPU Accelerator Tools &amp; Apps</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/software/rocm.html">ROCm Open Software</a><br />
+</li>
+<li><a href="https://www.amd.com/en/developer/resources/infinity-hub.html">Infinity Hub Software Containers</a></li>
+<li><a href="/en/products/software/enterprise-ai-reference-stack.html">Enterprise AI Reference Stack</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-334c7ff275" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-11b9a43942" class="cmp-text">
+    <h6>Ethernet Adapter Tools</h6>
+<ul>
+<li><a href="/en/products/ethernet-adapters/onload.html">Solarflare Onload Software</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-1ff5e3154d" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-55252bf182" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+
+		
+	</div>
+</div></div>
+								
+							</li>
+						
+							<li class="nav-item  dropdown">
+								
+								
+									<a data-cmp-hook-header="tab" class="nav-link top-level dropdown-toggle header-menu-links" data-tracking-information="Solutions" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" href="#" aria-haspopup="true" id="topNav-tab-solutions">Solutions
+										<span class="chevron-up-down-icon"></span>
+									</a>
+									<div data-cmp-hook-header="tabpanel" class="dropdown-menu mega-menu" data-tracking-information="Solutions" aria-labelledby="topNav-tab-solutions"><div id="headerMenu-46283b2e1e" class="cmp-headermenu d-flex align-items-start" data-cmp-is="headermenu" data-component="headermenu" data-placeholder-text="false" data-gaming-audience-text="Gaming" data-consumer-audience-text="Consumer" data-business-audience-text="Business" data-content-creator-audience-text="Content Creator" data-shop-amd-text="Shop AMD" data-direct-buy-text="Buy Direct from AMD" data-see-all-text="View All" data-for-text="for" data-visit-store-text="Visit Store" data-open-tab-text="opens in a new tab">
+	
+	<div role="tablist" class="cmp-headermenu__tablist nav flex-column nav-pills" aria-orientation="vertical" aria-multiselectable="false">
+		
+		
+		<button role="tab" type="button" id="headerMenu-46283b2e1e-item-5f064e1f45-tab" class="cmp-headermenu__tab cmp-headermenu__tab--active active nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-46283b2e1e-item-5f064e1f45-tabpanel" aria-controls="headerMenu-46283b2e1e-item-5f064e1f45-tabpanel" tabindex="0" data-cmp-hook-headermenu="tab"> AI <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-46283b2e1e-item-473082234e-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-46283b2e1e-item-473082234e-tabpanel" aria-controls="headerMenu-46283b2e1e-item-473082234e-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Industries <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-46283b2e1e-item-7ace91741c-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-46283b2e1e-item-7ace91741c-tabpanel" aria-controls="headerMenu-46283b2e1e-item-7ace91741c-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Workloads <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-46283b2e1e-item-c7064786cc-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-46283b2e1e-item-c7064786cc-tabpanel" aria-controls="headerMenu-46283b2e1e-item-c7064786cc-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Gaming <span class="chevron-right-icon"></span>
+		</button>
+	</div>
+	
+	<div class="cmp-headermenu__tabcontent" id="v-pills-tabContent">
+		
+		<div id="headerMenu-46283b2e1e-item-5f064e1f45-tabpanel" role="tabpanel" aria-labelledby="headerMenu-46283b2e1e-item-5f064e1f45-tab" tabindex="0" class="cmp-headermenu__tabpanel cmp-headermenu__tabpanel--active active " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-46283b2e1e-item-5f064e1f45-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="AI" data-bs-toggle="collapse" href="#headerMenu-46283b2e1e-item-5f064e1f45-collapse" aria-expanded="false" aria-controls="headerMenu-46283b2e1e-item-5f064e1f45-collapse" data-cmp-hook-headermenu="accordions">
+                	AI <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-46283b2e1e-item-5f064e1f45-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="AI" aria-labelledby="headerMenu-46283b2e1e-item-5f064e1f45-heading">
+	            
+    
+    <div id="container-a5399e0527" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-d79b64e9a8" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-6a8df5a5b5" class="cmp-text">
+    <h6>Overview</h6>
+<ul>
+<li><a href="/en/solutions/ai.html">AI Solutions</a></li>
+<li><a href="/en/solutions/ai/advancing-science.html">Advancing Science</a></li>
+<li><a href="/en/solutions/ai/silo-ai.html">AMD Silo AI</a></li>
+<li><a href="/en/solutions/ai/physical-ai.html">Physical AI</a></li>
+<li><a href="https://www.amd.com/en/solutions/ai/sovereign-ai.html">Sovereign AI</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-0763270a1f" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-3d752dff5d" class="cmp-text">
+    <h6>For Data Center &amp; Cloud</h6>
+<ul>
+<li><a href="/en/products/accelerators/instinct.html">GPU Accelerators</a></li>
+<li><a href="/en/products/rackscale-solutions/helios.html">Helios Rackscale Solutions</a></li>
+<li><a href="https://www.amd.com/en/products/processors/server/epyc/ai.html">Server Processors</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-9d5a0925aa" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-e7fa3c0aed" class="cmp-text">
+    <h6>For Edge &amp; Endpoints</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/processors/business-systems/ryzen-ai.html">Ryzen AI for Business</a></li>
+<li><a href="https://www.amd.com/en/products/processors/consumer/ryzen-ai.html">Ryzen AI for Consumer</a></li>
+<li><a href="/en/products/embedded/ryzen-ai.html">Ryzen AI for Embedded</a></li>
+<li><a href="https://www.amd.com/en/products/graphics/radeon-ai.html">Radeon Graphics Cards</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/versal/gen2/ai-edge-series.html">Adaptive SoCs for Edge</a></li>
+<li><a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc.html">Adaptive SoCs for Embedded</a></li>
+<li><a href="https://www.amd.com/en/products/system-on-modules/kria.html">System-on-Modules (SOMs)</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-bf5aae96b5" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-79f0928449" class="cmp-text">
+    <h6>For Developers</h6>
+<ul>
+<li><a href="/en/developer/resources/rocm-hub.html">ROCm AI Developer Hub</a></li>
+<li><a href="/en/developer/resources/vitis-ai.html">Vitis AI Developer Hub</a></li>
+<li><a href="https://www.amd.com/en/developer/zendnn.html">ZenDNN Inference Libraries</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/ryzen-ai-software.html">Ryzen AI Software</a></li>
+<li><a href="https://developer.amd.com/ai-developer-program">AI Developer Program</a></li>
+<li><a href="https://developer.amd.com/amd-ai-academy">AI Academy</a></li>
+<li><a href="/en/products/processors/desktops/ryzen/ryzen-ai-halo.html">Ryzen AI Halo</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-46283b2e1e-item-473082234e-tabpanel" role="tabpanel" aria-labelledby="headerMenu-46283b2e1e-item-473082234e-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-46283b2e1e-item-473082234e-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Industries" data-bs-toggle="collapse" href="#headerMenu-46283b2e1e-item-473082234e-collapse" aria-expanded="false" aria-controls="headerMenu-46283b2e1e-item-473082234e-collapse" data-cmp-hook-headermenu="accordions">
+                	Industries <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-46283b2e1e-item-473082234e-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Industries" aria-labelledby="headerMenu-46283b2e1e-item-473082234e-heading">
+	            
+    
+    <div id="container-6e60d7142d" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-3c8bef973b" class="cmp-text">
+    <h6>Industries</h6>
+
+</div>
+
+    
+
+
+</div>
+<div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-06697bc1f9" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-2d87b2ced8" class="cmp-text">
+    <h6 class="d-none">Industries</h6>
+<ul>
+<li><a href="https://www.amd.com/en/solutions/aerospace-and-defense.html">Aerospace &amp; Defense</a></li>
+<li><a href="https://www.amd.com/en/solutions/architecture-engineering-and-construction.html">Architecture, Engineering, &amp; Construction</a></li>
+<li><a href="/en/solutions/automotive.html">Automotive</a></li>
+<li><a href="https://www.amd.com/en/solutions/broadcast-and-pro-av.html">Broadcast &amp; Pro AV</a></li>
+<li><a href="/en/solutions/data-center.html">Data Center</a></li>
+<li><a href="https://www.amd.com/en/solutions/energy.html">Energy</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-04a7c39146" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-20932f1590" class="cmp-text">
+    <h6 class="d-none">Industries</h6>
+<ul>
+<li><a href="https://www.amd.com/en/solutions/emulation-prototyping.html">Emulation &amp; Prototyping</a></li>
+<li><a href="https://www.amd.com/en/solutions/financial-services.html">Financial Services</a></li>
+<li><a href="https://www.amd.com/en/solutions/healthcare.html">Healthcare</a><br />
+</li>
+<li><a href="https://www.amd.com/en/solutions/high-performance-computing.html">High-Performance Computing</a></li>
+<li><a href="https://www.amd.com/en/solutions/home-and-lifestyle.html">Home &amp; Lifestyle</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-f75e0d5122" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-9dc5427714" class="cmp-text">
+    <h6 class="d-none">Industries</h6>
+<ul>
+<li><a href="https://www.amd.com/en/solutions/industrial.html">Industrial</a></li>
+<li><a href="https://www.amd.com/en/solutions/manufacturing.html">Manufacturing</a></li>
+<li><a href="https://www.amd.com/en/solutions/media-and-entertainment.html">Media &amp; Entertainment</a></li>
+<li><a href="https://www.amd.com/en/solutions/product-design.html">Product Design</a></li>
+<li><a href="https://www.amd.com/en/solutions/public-sector.html">Public Sector</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-ecdcdccc17" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-fff63bcf5c" class="cmp-text">
+    <h6 class="d-none">Industries</h6>
+<ul>
+<li><a href="https://www.amd.com/en/solutions/retail-and-ecommerce.html">Retail &amp; E-Commerce</a></li>
+<li><a href="/en/solutions/robotics.html">Robotics</a></li>
+<li><a href="https://www.amd.com/en/solutions/semiconductor.html">Semiconductor</a></li>
+<li><a href="https://www.amd.com/en/solutions/telco-and-networking.html">Telco &amp; Networking</a></li>
+<li><a href="https://www.amd.com/en/solutions/test-and-measurement.html">Test &amp; Measurement</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-46283b2e1e-item-7ace91741c-tabpanel" role="tabpanel" aria-labelledby="headerMenu-46283b2e1e-item-7ace91741c-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-46283b2e1e-item-7ace91741c-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Workloads" data-bs-toggle="collapse" href="#headerMenu-46283b2e1e-item-7ace91741c-collapse" aria-expanded="false" aria-controls="headerMenu-46283b2e1e-item-7ace91741c-collapse" data-cmp-hook-headermenu="accordions">
+                	Workloads <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-46283b2e1e-item-7ace91741c-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Workloads" aria-labelledby="headerMenu-46283b2e1e-item-7ace91741c-heading">
+	            
+    
+    <div id="container-037b4edc4b" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-792c451807" class="cmp-text">
+    <h6>Workloads</h6>
+
+</div>
+
+    
+
+
+</div>
+<div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-b201ea2100" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-15fa43110b" class="cmp-text">
+    <ul>
+<li><a href="https://www.amd.com/en/solutions/ai.html">AI</a></li>
+<li><a href="https://www.amd.com/en/solutions/data-center/cloud-computing.html">Cloud Computing</a></li>
+<li><a href="https://www.amd.com/en/solutions/database-and-analytics.html">Database &amp; Analytics</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-769bbde0fa" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-c2fa4d11f3" class="cmp-text">
+    <ul>
+<li><a href="https://www.amd.com/en/solutions/embedded-computing.html">Embedded Computing</a></li>
+<li><a href="https://www.amd.com/en/solutions/hci-and-virtualization.html">HCI &amp; Virtualization</a></li>
+<li><a href="https://www.amd.com/en/solutions/data-center/infrastructure-acceleration.html">Infrastructure Acceleration</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-6dffcc774b" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-edbc3f0993" class="cmp-text">
+    <ul>
+<li><a href="/en/solutions/data-center/networking.html">Networking Solutions</a></li>
+<li><a href="https://www.amd.com/en/solutions/quantum-computing.html">Quantum Computing</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-833f10a8cb" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-46283b2e1e-item-c7064786cc-tabpanel" role="tabpanel" aria-labelledby="headerMenu-46283b2e1e-item-c7064786cc-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-46283b2e1e-item-c7064786cc-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Gaming" data-bs-toggle="collapse" href="#headerMenu-46283b2e1e-item-c7064786cc-collapse" aria-expanded="false" aria-controls="headerMenu-46283b2e1e-item-c7064786cc-collapse" data-cmp-hook-headermenu="accordions">
+                	Gaming <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-46283b2e1e-item-c7064786cc-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Gaming" aria-labelledby="headerMenu-46283b2e1e-item-c7064786cc-heading">
+	            
+    
+    <div id="container-f178eed5b9" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-0eadaa2eeb" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-d2d13e3eea" class="cmp-text">
+    <h6>Gaming</h6>
+<ul>
+<li><a href="https://www.amd.com/en/gaming.html">Gaming with AMD</a></li>
+<li><a href="https://www.amd.com/en/gaming/featured-games.html">Featured Games</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-247bd73b69" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-14cf79f2a8" class="cmp-text">
+    <h6>Systems</h6>
+<ul>
+<li><a href="https://www.amd.com/en/gaming/advantage.html">Advantage Gaming Systems</a></li>
+<li><a href="https://www.amd.com/en/gaming/desktops.html">Gaming Desktops</a></li>
+<li><a href="https://www.amd.com/en/gaming/laptops.html">Gaming Laptops</a></li>
+<li><a href="https://www.amd.com/en/gaming/handhelds.html">Gaming Handhelds</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-9c5144f307" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-8943a7ea8a" class="cmp-text">
+    <h6>Technologies</h6>
+<ul>
+<li><a href="https://www.amd.com/en/gaming/technologies/smart-technologies.html">Smart Technologies</a></li>
+<li><a href="/en/products/graphics/technologies/fidelityfx/super-resolution.html">AMD FSR</a></li>
+<li><a href="https://www.amd.com/en/products/graphics/technologies/freesync.html">FreeSync</a></li>
+<li><a href="https://www.amd.com/en/products/software/adrenalin/hypr-rx.html">HYPR-RX</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-504dc5e7e0" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-474e9af204" class="cmp-text">
+    <h6>Resources</h6>
+<ul>
+<li><a href="https://www.amdgaming.com/">AMD Gaming Community</a></li>
+<li><a href="https://www.amd.com/en/products/software/adrenalin.html">AMD Software: Adrenalin Edition</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+
+		
+	</div>
+</div></div>
+								
+							</li>
+						
+							<li class="nav-item  dropdown">
+								
+								
+									<a data-cmp-hook-header="tab" class="nav-link top-level dropdown-toggle header-menu-links" data-tracking-information="Resources &amp; Support" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" href="#" aria-haspopup="true" id="topNav-tab-downloads-support">Resources &amp; Support
+										<span class="chevron-up-down-icon"></span>
+									</a>
+									<div data-cmp-hook-header="tabpanel" class="dropdown-menu mega-menu" data-tracking-information="Resources &amp; Support" aria-labelledby="topNav-tab-downloads-support"><div id="headerMenu-2ee39c468e" class="cmp-headermenu d-flex align-items-start" data-cmp-is="headermenu" data-component="headermenu" data-placeholder-text="false" data-gaming-audience-text="Gaming" data-consumer-audience-text="Consumer" data-business-audience-text="Business" data-content-creator-audience-text="Content Creator" data-shop-amd-text="Shop AMD" data-direct-buy-text="Buy Direct from AMD" data-see-all-text="View All" data-for-text="for" data-visit-store-text="Visit Store" data-open-tab-text="opens in a new tab">
+	
+	<div role="tablist" class="cmp-headermenu__tablist nav flex-column nav-pills" aria-orientation="vertical" aria-multiselectable="false">
+		
+		
+		<button role="tab" type="button" id="headerMenu-2ee39c468e-item-f2931226c7-tab" class="cmp-headermenu__tab cmp-headermenu__tab--active active nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-2ee39c468e-item-f2931226c7-tabpanel" aria-controls="headerMenu-2ee39c468e-item-f2931226c7-tabpanel" tabindex="0" data-cmp-hook-headermenu="tab"> Downloads <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-2ee39c468e-item-8126f0ed47-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-2ee39c468e-item-8126f0ed47-tabpanel" aria-controls="headerMenu-2ee39c468e-item-8126f0ed47-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Developer Resources <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-2ee39c468e-item-1866eb47aa-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-2ee39c468e-item-1866eb47aa-tabpanel" aria-controls="headerMenu-2ee39c468e-item-1866eb47aa-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Partner Resources <span class="chevron-right-icon"></span>
+		</button>
+	
+		
+		
+		<button role="tab" type="button" id="headerMenu-2ee39c468e-item-498b9948f9-tab" class="cmp-headermenu__tab nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-2ee39c468e-item-498b9948f9-tabpanel" aria-controls="headerMenu-2ee39c468e-item-498b9948f9-tabpanel" tabindex="-1" data-cmp-hook-headermenu="tab"> Support <span class="chevron-right-icon"></span>
+		</button>
+	</div>
+	
+	<div class="cmp-headermenu__tabcontent" id="v-pills-tabContent">
+		
+		<div id="headerMenu-2ee39c468e-item-f2931226c7-tabpanel" role="tabpanel" aria-labelledby="headerMenu-2ee39c468e-item-f2931226c7-tab" tabindex="0" class="cmp-headermenu__tabpanel cmp-headermenu__tabpanel--active active " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-2ee39c468e-item-f2931226c7-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Downloads" data-bs-toggle="collapse" href="#headerMenu-2ee39c468e-item-f2931226c7-collapse" aria-expanded="false" aria-controls="headerMenu-2ee39c468e-item-f2931226c7-collapse" data-cmp-hook-headermenu="accordions">
+                	Downloads <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-2ee39c468e-item-f2931226c7-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Downloads" aria-labelledby="headerMenu-2ee39c468e-item-f2931226c7-heading">
+	            
+    
+    <div id="container-1bab53dfb6" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-7009430c65" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-efa1128dcb" class="cmp-text">
+    <h6>EPYC Processors</h6>
+<ul>
+<li><a href="https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&amp;f-amd_archive_status=Active&amp;f-amd_audience=Technical">Client &amp; Data Center Tech Docs</a></li>
+<li><a href="https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&amp;f-amd_document_type=Solution%20Briefs,Performance%20Briefs,White%20Papers,Product%20Briefs&amp;f-amd_archive_status=Active&amp;f-amd_product_brand=EPYC,Instinct&amp;f-amd_form_factor=Servers">EPYC White Papers &amp; Briefs</a></li>
+<li><a href="https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&amp;f-amd_document_type=Tuning%20Guides&amp;f-amd_archive_status=Active&amp;f-amd_product_brand=EPYC">EPYC Tuning Guides</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-f5d867c77d" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-cc97554bb5" class="cmp-text">
+    <h6>Radeon Graphics &amp; AMD Chipsets</h6>
+<ul>
+<li><a href="https://www.amd.com/en/support/download/drivers.html">Drivers</a></li>
+<li><a href="https://www.amd.com/en/products/graphics/software/radeon-prorender.html">Radeon ProRender Plug-ins</a></li>
+<li><a href="https://www.amd.com/en/search/certified-drivers.html">PRO Certified ISV Applications</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-88d1ed6b9c" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-a7a2c064fb" class="cmp-text">
+    <h6>Adaptive SoCs &amp; FPGAs</h6>
+<ul>
+<li><a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools.html">Vivado Design Suite</a></li>
+<li><a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html">Vitis Software Platform</a></li>
+<li><a href="https://github.com/Xilinx/Vitis_Libraries">Vitis Accelerated Libraries</a></li>
+<li><a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-platforms.html">Vitis Embedded Platforms</a></li>
+<li><a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-design-tools.html">Embedded Software</a></li>
+<li><a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/device-models.html">Device Models</a></li>
+<li><a href="https://www.xilinx.com/support/package-pinout-files.html">Package Pinout Files</a></li>
+<li><a href="https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/power-design-manager.html">Power Design Manager</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-daa64ada98" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-76bcebe230" class="cmp-text">
+    <h6>Alveo Accelerators &amp; Kria SOMs</h6>
+<ul>
+<li><a href="https://www.amd.com/en/support/download/drivers.html">Alveo Package Files</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/alveo-apps/all-apps.html">Alveo App Store</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/kria-apps.html">Kria App Store</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+<div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-2a7ad7a1c4" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-2a35bbfd89" class="cmp-text">
+    <h6>Ryzen Processors</h6>
+<ul>
+<li><a href="https://www.amd.com/en/products/software/ryzen-master.html">Ryzen Master Overclocking Utility</a></li>
+<li><a href="https://www.amd.com/en/products/software/storemi.html">StoreMI</a></li>
+<li><a href="https://www.amd.com/en/support/downloads/manageability-tools.html">PRO Manageability Tools for IT Administrators</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-3f8b1357df" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-ced73af31a" class="cmp-text">
+    <h6>Ethernet Adapters</h6>
+<ul>
+<li><a href="/en/support/ethernet-adapters/solarflare.html">Solarflare Software &amp; Downloads</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-b287d69d4c" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-82075f7ff6" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-2ee39c468e-item-8126f0ed47-tabpanel" role="tabpanel" aria-labelledby="headerMenu-2ee39c468e-item-8126f0ed47-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-2ee39c468e-item-8126f0ed47-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Developer Resources" data-bs-toggle="collapse" href="#headerMenu-2ee39c468e-item-8126f0ed47-collapse" aria-expanded="false" aria-controls="headerMenu-2ee39c468e-item-8126f0ed47-collapse" data-cmp-hook-headermenu="accordions">
+                	Developer Resources <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-2ee39c468e-item-8126f0ed47-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Developer Resources" aria-labelledby="headerMenu-2ee39c468e-item-8126f0ed47-heading">
+	            
+    
+    <div id="container-2fe29212a4" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-825c5839fe" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-e8cbd17b70" class="cmp-text">
+    <h6>Overview</h6>
+<ul>
+<li><a href="/en/developer.html" target="_blank">Developer Central</a></li>
+<li><a href="https://developer.amd.com/ai-developer-program">AI Developer Program</a></li>
+<li><a href="https://developer.amd.com/amd-ai-academy">AI Academy</a></li>
+<li><a href="https://developer.amd.com/playbooks/">AI Playbooks</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-a65cfa7f9a" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-b1dddd8e2c" class="cmp-text">
+    <h6>Processors</h6>
+<ul>
+<li><a href="/en/developer/zen-software-studio.html">Zen Software Studio</a></li>
+<li><a href="https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&amp;f-amd_document_type=Tuning%20Guides&amp;f-amd_archive_status=Active&amp;f-amd_product_brand=EPYC">EPYC Tuning Guides</a></li>
+<li><a href="https://www.amd.com/en/search/documentation/hub.html#sortCriteria=%40amd_release_date%20descending&amp;f-amd_document_type=Solution%20Briefs,Performance%20Briefs,White%20Papers,Product%20Briefs&amp;f-amd_archive_status=Active&amp;f-amd_product_brand=EPYC,Instinct&amp;f-amd_form_factor=Servers">EPYC Whitepapers &amp; Briefs</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/ryzen-ai-software.html">Ryzen AI Software</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-6e37924e7b" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-76eea8d8c9" class="cmp-text">
+    <h6>Accelerators</h6>
+<ul>
+<li><a href="https://www.amd.com/en/developer/resources/rocm-hub/dev-ai.html">ROCm AI Developer Hub</a></li>
+<li><a href="https://rocm.docs.amd.com/en/latest/" style="background-color: rgb(255,255,255);">ROCm Documentation</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/enterprise-ai-reference-stack.html">Enterprise AI Reference Stack</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/infinity-hub.html">Infinity Hub Software Containers</a></li>
+<li><a href="https://www.amd.com/en/developer/browse-by-resource-type/software-tools.html#dpu-accelerators">Pensando DPUs</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-0906766d36" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-55996f61c5" class="cmp-text">
+    <h6>Embedded Products</h6>
+<ul>
+<li><a href="https://www.amd.com/en/developer/resources/vivado.html">Vivado Design Suite</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/vitis.html">Vitis Software Developer Tools</a></li>
+<li><a href="/en/developer/resources/vitis-ai.html">Vitis AI Developer Hub</a></li>
+<li><a href="https://docs.amd.com/">Documentation</a></li>
+<li><a href="https://learningcatalog-amd.netexam.com/">Product Training</a></li>
+<li><a href="/en/search/partner/embedded-partner-solutions.html">Embedded Partner Solutions</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+<div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-dbae7c89d1" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-6c2e5d46a9" class="cmp-text">
+    <h6>Graphics</h6>
+<ul>
+<li><a href="https://gpuopen.com/" target="_blank">GPUOpen Open Source Tools</a><br />
+</li>
+<li><a href="https://gpuopen.com/learn/">Documentation</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-b1fed35dad" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-a8ce8ef63d" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-dc04bf48ca" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-2ee39c468e-item-1866eb47aa-tabpanel" role="tabpanel" aria-labelledby="headerMenu-2ee39c468e-item-1866eb47aa-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-2ee39c468e-item-1866eb47aa-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Partner Resources" data-bs-toggle="collapse" href="#headerMenu-2ee39c468e-item-1866eb47aa-collapse" aria-expanded="false" aria-controls="headerMenu-2ee39c468e-item-1866eb47aa-collapse" data-cmp-hook-headermenu="accordions">
+                	Partner Resources <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-2ee39c468e-item-1866eb47aa-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Partner Resources" aria-labelledby="headerMenu-2ee39c468e-item-1866eb47aa-heading">
+	            
+    
+    <div id="container-380b9bb133" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-0e182834db" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-95a9f331cf" class="cmp-text">
+    <h6>Overview</h6>
+<ul>
+<li><a href="https://www.amd.com/en/partner.html">Partner Hub Home</a></li>
+<li><a href="https://www.amd.com/en/partner/partner-network.html">AMD Partner Network</a></li>
+</ul>
+<p> </p>
+<p> </p>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-d944fabf2a" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-3d44c31305" class="cmp-text">
+    <h6>Resources by Product</h6>
+<ul>
+<li><a href="/en/partner/browse-by-product/instinct-resources.html">AMD Instinct</a></li>
+<li><a href="/en/partner/browse-by-product/epyc-resources.html">EPYC</a></li>
+<li><a href="/en/partner/browse-by-product/ryzen-pro-resources.html">Ryzen PRO</a></li>
+<li><a href="/en/partner/browse-by-product/ryzen-resources.html">Ryzen</a></li>
+<li><a href="/en/partner/browse-by-product/ryzen-threadripper-resources.html">Ryzen Threadripper</a></li>
+<li><a href="/en/partner/browse-by-product/radeon-pro-resources.html">Radeon PRO</a></li>
+<li><a href="/en/partner/browse-by-product/radeon-resources.html">Radeon</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-63c5a5daed" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-4b08dadd89" class="cmp-text">
+    <h6>Resources by Type</h6>
+<ul>
+<li><a href="/en/partner/browse-by-resource/partner-insights-articles.html">Partner Insights Articles</a></li>
+<li><a href="/en/partner/browse-by-resource/amd-arena-training.html">AMD Arena Training</a></li>
+<li><a href="/en/partner/browse-by-resource/meet-the-experts-webinars.html">Meet the Experts Webinars</a></li>
+<li><a href="/en/partner/browse-by-resource/marketing-materials.html">Marketing Materials</a></li>
+<li><a href="/en/partner/browse-by-resource/faqs.html">Partner FAQs</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-d00f5d4284" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-5074f9fdd8" class="cmp-text">
+    <h6>About Our Partners</h6>
+<ul>
+<li><a href="/en/partner/about-partners/partner-ecosystems-solutions.html">Partner Ecosystems &amp; Solutions</a></li>
+<li><a href="/en/partner/about-partners/authorized-distributors.html">Authorized Distributors</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+<div id="headerMenu-2ee39c468e-item-498b9948f9-tabpanel" role="tabpanel" aria-labelledby="headerMenu-2ee39c468e-item-498b9948f9-tab" tabindex="0" class="cmp-headermenu__tabpanel " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-2ee39c468e-item-498b9948f9-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Support" data-bs-toggle="collapse" href="#headerMenu-2ee39c468e-item-498b9948f9-collapse" aria-expanded="false" aria-controls="headerMenu-2ee39c468e-item-498b9948f9-collapse" data-cmp-hook-headermenu="accordions">
+                	Support <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-2ee39c468e-item-498b9948f9-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Support" aria-labelledby="headerMenu-2ee39c468e-item-498b9948f9-heading">
+	            
+    
+    <div id="container-4cfb3e9f1a" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-29b17a2fdb" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-c2557a6378" class="cmp-text">
+    <h6>AMD Global Support</h6>
+<ul>
+<li><a href="https://www.amd.com/en/support.html">Support Home</a></li>
+<li><a href="https://docs.amd.com/">Technical Information Portal</a></li>
+<li><a href="https://www.amd.com/en/support/warranty.html">Warranty Services</a></li>
+<li><a href="https://www.amd.com/en/products/specifications.html">Product Specifications</a></li>
+<li><a href="https://www.amd.com/en/resources/product-security.html">Product Security (PSIRT)</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-71300a0b34" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-18b05d9fa2" class="cmp-text">
+    <h6>Processors &amp; Graphics</h6>
+<ul>
+<li><a href="https://www.amd.com/en/forms/contact-us/support.html">Product Support</a></li>
+<li><a href="https://www.amd.com/en/resources/support-articles/knowledge-base-search.html">Knowledge Base</a></li>
+<li><a href="https://www.amd.com/en/support.html">Technical &amp; Warranty Help</a></li>
+<li><a href="https://pcforum.amd.com/s/">PC &amp; Processors Community</a></li>
+<li><a href="https://www.amd.com/en/support/download/drivers.html">Drivers &amp; Software Downloads</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-9d440f2abf" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-713c3b30ae" class="cmp-text">
+    <h6>Accelerators</h6>
+<ul>
+<li><a href="https://adaptivesupport.amd.com/s/?language=en_US">Alveo Product Support</a></li>
+<li><a href="https://www.amd.com/en/support/accelerators/pensando.html">Pensando Product Support</a></li>
+<li><a href="/en/support/ethernet-adapters/solarflare.html">Solarflare Product Support</a></li>
+</ul>
+<p> </p>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-0bae3c9da8" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-5cc0853c69" class="cmp-text">
+    <h6>Adaptive SoCs &amp; FPGAs</h6>
+<ul>
+<li><a href="https://adaptivesupport.amd.com/">Product Support</a></li>
+<li><a href="https://adaptivesupport.amd.com/s/knowledge-base" style="background-color: rgb(255,255,255);">Knowledge Base</a></li>
+<li><a href="https://adaptivesupport.amd.com/s/topiccatalog">Community Forums</a></li>
+<li><a href="https://docs.amd.com/v/u/en-US/ug1776-adaptive-computing-design-hubs-lp">Design Hubs</a></li>
+<li><a href="https://www.xilinx.com/support/quality/product-return.html">Product Return</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+
+		
+	</div>
+</div></div>
+								
+							</li>
+						
+							<li class="nav-item  dropdown">
+								
+								
+									<a data-cmp-hook-header="tab" class="nav-link top-level dropdown-toggle header-menu-links" data-tracking-information="Shop" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" href="#" aria-haspopup="true" id="topNav-tab-shop-static">Shop
+										<span class="chevron-up-down-icon"></span>
+									</a>
+									<div data-cmp-hook-header="tabpanel" class="dropdown-menu mega-menu" data-tracking-information="Shop" aria-labelledby="topNav-tab-shop-static"><div id="headerMenu-034a208605" class="cmp-headermenu d-flex align-items-start" data-cmp-is="headermenu" data-component="headermenu" data-placeholder-text="false" data-gaming-audience-text="Gaming" data-consumer-audience-text="Consumer" data-business-audience-text="Business" data-content-creator-audience-text="Content Creator" data-shop-amd-text="Shop AMD" data-direct-buy-text="Buy Direct from AMD" data-see-all-text="View All" data-for-text="for" data-visit-store-text="Visit Store" data-open-tab-text="opens in a new tab">
+	
+	<div role="tablist" class="cmp-headermenu__tablist nav flex-column nav-pills" aria-orientation="vertical" aria-multiselectable="false">
+		
+		
+		<button role="tab" type="button" id="headerMenu-034a208605-item-de1bf49851-tab" class="cmp-headermenu__tab cmp-headermenu__tab--active active nav-link header-menu-links" data-bs-toggle="pill" data-bs-target="#headerMenu-034a208605-item-de1bf49851-tabpanel" aria-controls="headerMenu-034a208605-item-de1bf49851-tabpanel" tabindex="0" data-cmp-hook-headermenu="tab"> Shop AMD <span class="chevron-right-icon"></span>
+		</button>
+	</div>
+	
+	<div class="cmp-headermenu__tabcontent" id="v-pills-tabContent">
+		
+		<div id="headerMenu-034a208605-item-de1bf49851-tabpanel" role="tabpanel" aria-labelledby="headerMenu-034a208605-item-de1bf49851-tab" tabindex="0" class="cmp-headermenu__tabpanel cmp-headermenu__tabpanel--active active " data-cmp-hook-headermenu="tabpanel">
+			<div class="cmp-headermenu__accordionheading" role="tab" id="headerMenu-034a208605-item-de1bf49851-heading">
+                <a class="collapsed header-menu-links" data-tracking-information="Shop AMD" data-bs-toggle="collapse" href="#headerMenu-034a208605-item-de1bf49851-collapse" aria-expanded="false" aria-controls="headerMenu-034a208605-item-de1bf49851-collapse" data-cmp-hook-headermenu="accordions">
+                	Shop AMD <span class="chevron-up-down-icon"></span>
+                </a>
+		    </div>
+		    <div id="headerMenu-034a208605-item-de1bf49851-collapse" class="collapse cmp-headermenu__accordionbody" role="tabpanel" data-tracking-information="Shop AMD" aria-labelledby="headerMenu-034a208605-item-de1bf49851-heading">
+	            
+    
+    <div id="container-65098b9599" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="columns parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+<div class="row    ">
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-bb94f37580" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-f3b9ec3aaa" class="cmp-text">
+    <h6>Gaming &amp; Personal Computing</h6>
+<ul>
+<li><a href="https://shop-us-en.amd.com/processors">Ryzen Processors</a></li>
+<li><a href="https://shop-us-en.amd.com/amd-promotions/">Promotions &amp; Bundles</a></li>
+<li><a href="https://shop-us-en.amd.com/">Shop All</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-398b94f236" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-15663d82a1" class="cmp-text">
+    <h6>Adaptive &amp; Embedded Computing</h6>
+<ul>
+<li><a href="https://shop-us-en.amd.com/adaptive-embedded-computing/system-on-modules/">System-on-Modules (SOMs)</a></li>
+<li><a href="https://shop-us-en.amd.com/adaptive-embedded-computing/data-center-accelerator-cards/">Data Center Accelerator Cards</a></li>
+<li><a href="https://shop-us-en.amd.com/adaptive-embedded-computing/soc-fpga-evaluation-kits/">Adaptive SoC &amp; FPGA Evaluation Kits</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-77335c908c" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-85296a2568" class="cmp-text">
+    <h6>Get AMD Fan Gear</h6>
+<ul>
+<li><a href="https://amdfanstore.com/">Visit the Store</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+		
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+    	
+
+    	
+		
+		<div class="      col-xl-3 ">
+			
+			
+				<div class="container-parsys">
+    
+    <div id="container-f0de9409c6" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-7ba5d03442" class="cmp-text">
+    <h6>Shop Our Retail Partners</h6>
+<ul>
+<li><a href="/en/where-to-buy/processors/ryzen.html">Ryzen Processors</a></li>
+<li><a href="https://www.amd.com/en/where-to-buy/graphics/radeon.html">Radeon Graphics Cards</a></li>
+<li><a href="https://www.amd.com/en/gaming/laptops/advantage-premium.html">Advantage Laptops</a></li>
+<li><a href="https://www.amd.com/en/gaming/desktops/advantage-premium.html">Advantage Desktops</a></li>
+<li><a href="https://www.amd.com/en/gaming/handhelds.html">Gaming Handhelds</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+			
+		</div>
+	
+</div>
+
+
+    
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+		    </div>	
+		</div>
+
+		
+	</div>
+</div></div>
+								
+							</li>
+						</ul>
+					</div>
+					<div class="icon-nav text-center ms-auto">
+						<div class="xfpage page basicpage">
+    
+    <div id="container-bccb624aa1" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="headerIcons aem-GridColumn aem-GridColumn--default--12"><div class="header-icons d-flex ms-auto" id="headerIcons-e872d30ad7">
+	
+	<div class="icon-item dropdown">
+		<a class="dropdown-toggle" href="#" id="signedOutDropdown" data-tracking-information="signedOutDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" aria-label="Signed Out User">
+			<i class="fass fa-user"></i>
+		</a>
+		<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="signedOutDropdown">
+			<li>
+				<div class="dropdown-pointer"></div>
+			</li>
+			<li>
+				<ul class="dropdown-menu-content">
+					<li>
+						<a class="dropdown-item" data-tracking-information="signedOutDropdown|My Account" href="https://account.amd.com/en/profile.html">My Account</a>
+					</li>
+					<li>
+						<a class="dropdown-item" data-tracking-information="signedOutDropdown|Create Account" href="https://www.amd.com/en/registration/create-account.html">Create Account</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	
+	
+	
+	
+
+	
+	
+	<div class="icon-item  dropdown">
+		<a class=" dropdown-toggle" href="#" id="langDropdown" data-tracking-information="languageDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" aria-label="Language">
+			<i class="fass fa-globe"></i>
+		</a>
+		<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+			<li>
+				<div class="dropdown-pointer"></div>
+			</li>
+			<li>
+				<ul class="dropdown-menu-content">
+					<li hreflang="en">
+						<a class="dropdown-item" data-tracking-information="languageDropdown|English" hreflang="en" href="/en/resources/support-articles/faqs/Download-Incomplete.html">English</a>
+					</li>
+					<li hreflang="zh-CN">
+						<a class="dropdown-item" data-tracking-information="languageDropdown|Chinese(simplified)" hreflang="zh-CN" href="/zh-cn/resources/support-articles/faqs/Download-Incomplete.html">简体中文</a>
+					</li>
+					<li hreflang="zh-TW">
+						<a class="dropdown-item" data-tracking-information="languageDropdown|Chinese(traditional)" hreflang="zh-TW" href="/zh-tw/resources/support-articles/faqs/Download-Incomplete.html">繁體中文</a>
+					</li>
+					<li hreflang="fr">
+						<a class="dropdown-item" data-tracking-information="languageDropdown|French" hreflang="fr" href="/fr/resources/support-articles/faqs/Download-Incomplete.html">Français</a>
+					</li>
+					<li hreflang="de">
+						<a class="dropdown-item" data-tracking-information="languageDropdown|German" hreflang="de" href="/de/resources/support-articles/faqs/Download-Incomplete.html">Deutsch</a>
+					</li>
+					<li hreflang="ja">
+						<a class="dropdown-item" data-tracking-information="languageDropdown|Japanese" hreflang="ja" href="/ja/resources/support-articles/faqs/Download-Incomplete.html">日本語</a>
+					</li>
+					<li hreflang="ko">
+						<a class="dropdown-item" data-tracking-information="languageDropdown|Korean" hreflang="ko" href="/ko/resources/support-articles/faqs/Download-Incomplete.html">한국어</a>
+					</li>
+					<li hreflang="pt-br">
+						<a class="dropdown-item" data-tracking-information="languageDropdown|Portuguese" hreflang="pt-br" href="/pt/resources/support-articles/faqs/Download-Incomplete.html">Português</a>
+					</li>
+					<li hreflang="es">
+						<a class="dropdown-item" data-tracking-information="languageDropdown|Spanish" hreflang="es" href="/es/resources/support-articles/faqs/Download-Incomplete.html">Español</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	<div class="icon-item  dropdown search-dropdown">
+		<a class=" dropdown-toggle" href="#" id="searchDropdown" data-tracking-information="searchDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" aria-label="Search">
+			<i class="fass fa-magnifying-glass"></i>
+		</a>
+		<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="searchDropdown">
+			<li>
+				<div class="dropdown-pointer"></div>
+			</li>
+			<li>
+				<ul class="dropdown-menu-content">
+					<li data-component="header-searchbox" class="header-searchbox" data-access-token="xxa724b833-6650-4e49-9f3e-11323e1e123a" data-org-id="xilinxcomprode2rjoqok" data-pipeline-context="en">
+						<div class="dropdown-item">
+							<atomic-search-interface search-hub="Site" reflect-state-in-url="false" language="en">
+								<atomic-search-box redirection-url="https://www.amd.com/en/search/site-search.html">
+								</atomic-search-box>
+							</atomic-search-interface>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	
+	
+	
+	
+	
+	<div class="icon-item dropdown">
+		
+	<div id="shopping-cart" class="shopping-cart" data-component="shopping-cart" data-label-unit-price="Unit Price" data-label-remove="Remove" data-label-checkout="Checkout" data-label-quantity="Qty" data-label-title="Shopping Cart" data-label-error="Error" data-label-empty-title="Your cart is empty" data-label-empty-text1="Looks like you have no items in your shopping cart." data-label-empty-text2="Click here" data-label-empty-text3="to continue shopping" data-label-tax="Tax" data-label-calculated="Calculated at Checkout" data-label-subtotal="Sub Total" data-label-shipping="Shipping" data-label-qty="Qty" data-default-image="/content/dam/code/images/cart/no-image-available.jpg" data-default-oms-image="/content/dam/code/images/cart/oms-product.jpg" data-default-bc-image="/content/dam/code/images/cart/bc-product.jpg" data-empty-cart-image="/content/dam/code/images/cart/empty-cart-icon.svg" data-cookie-name="oms_sid" data-cookie-path="; path=/" data-checkout-path="/bin/protected/oms/checkout" data-label-bc-products="Computing and Graphic" data-label-oms-products="Adaptive and Embedded" data-label-items-in-cart="Items in your cart" data-xilinx-cookie-url="https://www.xilinx.com/content/dam/xilinx/cssjs/xilinxCookieMessage.html" data-amd-cookie-url="https://download.amd.com/json/header-footer/cookieMessage.html" data-server="https://amd.entitlenow.com" data-checkout-server="https://account.amd.com">
+		<div id="shopping-cart-placeholder"></div>
+		<div id="simple-cart-placeholder"></div>
+	</div>
+</div>
+	
+</div>
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+					</div>
+				</div>
+			</nav>
+		</header>
+	</noindex>
+</div>
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+
+    
+</div>
+<div class="container-parsys aem-GridColumn aem-GridColumn--default--12">
+    
+    <div id="container-f826230f9b" class="cmp-container background-color:rgb(26,26,27);" data-component="cmp-container" role="banner" style="background-color:rgb(26,26,27);">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="heroExpressive parbase text-light aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="heroBasic">
+	<div class="container-lg">
+    	<div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+        	<div class="breadcrumb"><nav id="breadcrumb-10555f2552" class="cmp-breadcrumb" aria-label="Breadcrumb">
+    
+    <script type="application/ld+json">
+        {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "inLanguage": "en",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Welcome to AMD",
+      "item": "https://www.amd.com/en.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://www.amd.com/en/resources.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Download Not Complete"
+    }
+  ]
+}
+    </script>
+    
+    <ol class="cmp-breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li class="cmp-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://www.amd.com/en.html" class="cmp-breadcrumb__item-link" itemprop="item" aria-label="Welcome to AMD">
+               
+					<span class="fass fa-house" title="Home" itemprop="name" content="Home" aria-hidden="true"></span>
+               
+               
+            </a>
+            <meta itemprop="position" content="1"/>
+        </li>
+    
+        <li class="cmp-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="https://www.amd.com/en/resources.html" class="cmp-breadcrumb__item-link" itemprop="item" aria-label="Resources">
+               
+               
+					<span itemprop="name">Resources</span>
+               
+            </a>
+            <meta itemprop="position" content="2"/>
+        </li>
+    
+        <li class="cmp-breadcrumb__item cmp-breadcrumb__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            
+               
+               
+					<span itemprop="name">Download Not Complete</span>
+               
+            
+            <meta itemprop="position" content="3"/>
+        </li>
+    </ol>
+</nav>
+
+    
+</div>
+
+        	<h1>Download Not Complete</h1>
+
+        	
+    	</div>
+	</div>
+</div>
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+<div class="container-parsys content-wrapper aem-GridColumn aem-GridColumn--default--12">
+    
+    <div id="container-2d7679a74d" class="cmp-container " data-component="cmp-container" role="main">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="content-component parbase content-wrapper aem-GridColumn aem-GridColumn--default--12"><div class="support-article">
+	<div class="container">
+		<div class="row support-row">
+			<div class="col-12 article-container">
+				<div class="columns">
+					<div class="divider"><div class="divider"></div></div>
+					<div class="row row-cols-12">
+						<div class="col cmp-text">
+							<p><strong>Article Number:</strong>  Download-Incomplete</p>
+						</div>
+					</div>
+					<div class="divider"><div class="divider small"></div></div>
+				</div>
+			</div>
+			<div class="side-nav col-md-4 col-lg-3">
+				<div class="side-nav-container aem-GridColumn aem-GridColumn--default--12"><div class="anchorBarContainer anchorBar parbase vertical-anchor-bar">
+
+
+
+
+
+
+
+
+
+
+    
+
+</div>
+</div>
+			</div>
+			<div class="center-container col-12 col-md-8 col-lg-9 container-parsys aem-GridColumn aem-GridColumn--default--12">
+    
+    <div id="container-f8c5f1f5ea" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-6fb81b8820" class="cmp-text">
+    <h2>Review the guide below for solutions to download your file</h2>
+<p><br />
+We’re sorry, but we were unable to complete your download. There could be several reasons for this:</p>
+<p><b>You were linked to this download from a site outside of AMD.com</b><br />
+Since we do not allow downloads through sites outside of AMD.com, please download your file directly from our site. We want to make sure you have the right driver for your device and operating system. Choose your product and operating system on the <a href="https://www.amd.com/en/support">AMD Driver Download page </a>to obtain the correct driver for your device.</p>
+<p><b>You copy and pasted the download link or clicked “Save As”</b><br />
+When you copy and paste a link or right click on it and select “Save As,” your browser will not send a referrer and our site will not allow the download. Please click the Back button in your browser and simply click the link instead.</p>
+<p><b>Either a browser or firewall is set to disable sending referrers</b><br />
+Many browsers and personal firewalls allow you to hide the referrer sending. If you have changed this setting, please change it back to allow referrer checking.</p>
+<p><b>You’re using a download manager</b><br />
+Change the settings in your download manager to send an HTTP referrer so that we can verify that you are using our site for the download.</p>
+<p><a href="https://www.amd.com/en/support">Need help? Visit our Customer Care section</a></p>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+		</div>
+	</div>
+</div>
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+<div class="feedback text aem-GridColumn aem-GridColumn--default--12"><div data-component="feedback" data-feedbackurl="/content/amd/live-site/en/forms/feedback/amd-site-feedback.html">
+    <div class="feedback-button-wrapper">
+        <button type="button" data-function="close-feedback" class="btn-close-feedback" aria-label="Close feedback button">
+            <i class="fass fa-xmark"></i>
+        </button>
+        <button type="button" data-function="open-feedback" class="btn btn-feedback open-feedback-button" aria-haspopup="dialog">
+            Feedback
+        </button>
+    </div>
+    <amd-modal class="amd-modal-feedback" open="false" element-id="feedbackModal">
+        <div slot="header">
+            <div class="feedback-header bg-dark">
+                <h5 class="amd-feedback-title">AMD.com Feedback</h5>
+            </div>
+        </div>
+        <div slot="content" class="amd-feedback-content">
+            <div class="amd-feedback-container" id="feedback-container">
+            </div>
+        </div>
+    </amd-modal>
+</div></div>
+<div class="chatbot parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+<div class="chatbot" data-component="chatbot" id="chatbot-5696b1dde1" data-greeting="Hi! How can I help you today?" data-bot-name="Ask AMD" data-placeholder="Type your message..." data-theme="default" data-api-endpoint="https://www.amd.com" data-chatbot-uuid="xxa724b833-6650-4e49-9f3e-11323e1e123a" data-chatbot-id="xilinxcomprode2rjoqok" data-chatbot-type="AMD-Chatbot" data-disclaimer-key="This AI chat may occasionally be inaccurate. By using it, you agree to AMD&#39;s &lt;a href=&#39;/en/legal/privacy.html&#39;>Privacy Policy&lt;/a>. Conversations may be recorded to operate and improve the service. Do not share sensitive information.">
+</div>
+
+
+
+</div>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+    <div id="experiencefragment-0e29220a2c" class="cmp-experiencefragment cmp-experiencefragment--footer">
+    
+    <div id="container-061bd5f7cf" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="footer parbase aem-GridColumn aem-GridColumn--default--12"><noindex>
+	<footer class="common-footer" id="footer-5ec78a148c">
+		<div class="container-lg">
+			<section class="top-menu menu py-45">
+			    <div class="row d-flex">
+					<div class="col-md-5 col-xl-4">
+						
+    
+    <div id="container-62860a2b61" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="button btn btn-Expressive d-grid gap-2 d-flex justify-content-center aem-GridColumn aem-GridColumn--default--12">
+
+
+
+<a id="button-8115a952e8" href="/en/preferences/sign-up.html" data-bs-yt-play-label="Play">
+
+	<span class="">Subscribe to the latest news from AMD</span>
+  	
+	
+    
+
+</a>
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+					</div>
+					<div class="col-md-7 col-xl-8 text-center">
+						<ul class="social-menu">
+	
+	
+	<li>
+		
+		    <a href="https://www.linkedin.com/company/amd" target="_blank">
+				<span class="linkedin icon"></span>
+				<span class="sr-only">Linkedin</span>
+			</a>
+		
+		
+	</li>
+	
+	<li>
+		
+		
+			<div class="dropdown">
+			   <a href="#" id="footer-social-1" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-display="static" aria-expanded="false" aria-label="xtwitter">
+					<i class="xtwitter icon"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="footer-social-1">
+					<li>
+						<div class="dropdown-pointer"></div>
+					</li>
+					<li>
+						<ul class="dropdown-menu-content">
+                            
+								<li>
+							   		<a class="dropdown-item" href="https://x.com/AMD" target="_blank">
+	                                    AMD
+	                                </a>
+                              </li>
+                          
+								<li>
+							   		<a class="dropdown-item" href="https://x.com/AIatAMD" target="_blank">
+	                                    AI
+	                                </a>
+                              </li>
+                          
+								<li>
+							   		<a class="dropdown-item" href="https://x.com/AMDServer" target="_blank">
+	                                    Server
+	                                </a>
+                              </li>
+                          
+								<li>
+							   		<a class="dropdown-item" href="https://x.com/AMDRyzen" target="_blank">
+	                                    Ryzen
+	                                </a>
+                              </li>
+                          
+								<li>
+							   		<a class="dropdown-item" href="https://x.com/AMDRadeon" target="_blank">
+	                                    Radeon
+	                                </a>
+                              </li>
+                          
+								<li>
+							   		<a class="dropdown-item" href="https://x.com/AMDEmbedded" target="_blank">
+	                                    Embedded
+	                                </a>
+                              </li>
+                          
+								<li>
+							   		<a class="dropdown-item" href="https://x.com/AMDGaming" target="_blank">
+	                                    Gaming
+	                                </a>
+                              </li>
+                          
+						</ul>
+					</li>
+				</ul>
+			</div>
+		
+	</li>
+	
+	<li>
+		
+		    <a href="https://www.instagram.com/amd" target="_blank">
+				<span class="instagram icon"></span>
+				<span class="sr-only">Instagram</span>
+			</a>
+		
+		
+	</li>
+	
+	<li>
+		
+		
+			<div class="dropdown">
+			   <a href="#" id="footer-social-3" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-display="static" aria-expanded="false" aria-label="youtube">
+					<i class="youtube icon"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="footer-social-3">
+					<li>
+						<div class="dropdown-pointer"></div>
+					</li>
+					<li>
+						<ul class="dropdown-menu-content">
+                            
+								<li>
+							   		<a class="dropdown-item" href="https://www.youtube.com/user/amd" target="_blank">
+	                                    AMD
+	                                </a>
+                              </li>
+                          
+								<li>
+							   		<a class="dropdown-item" href="https://www.youtube.com/@AMDDevCentral" target="_blank">
+	                                    Developers
+	                                </a>
+                              </li>
+                          
+								<li>
+							   		<a class="dropdown-item" href="https://www.youtube.com/@Gaming-AMD" target="_blank">
+	                                    Gaming
+	                                </a>
+                              </li>
+                          
+						</ul>
+					</li>
+				</ul>
+			</div>
+		
+	</li>
+	
+	<li>
+		
+		    <a href="http://www.facebook.com/amd" target="_blank">
+				<span class="facebook icon"></span>
+				<span class="sr-only">Facebook</span>
+			</a>
+		
+		
+	</li>
+	
+	<li>
+		
+		
+			<div class="dropdown">
+			   <a href="#" id="footer-social-5" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" data-bs-display="static" aria-expanded="false" aria-label="discord">
+					<i class="discord icon"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="footer-social-5">
+					<li>
+						<div class="dropdown-pointer"></div>
+					</li>
+					<li>
+						<ul class="dropdown-menu-content">
+                            
+								<li>
+							   		<a class="dropdown-item" href="https://discord.com/invite/amd-dev" target="_blank">
+	                                    Developers
+	                                </a>
+                              </li>
+                          
+								<li>
+							   		<a class="dropdown-item" href="https://discord.gg/amd-gaming" target="_blank">
+	                                    Gaming
+	                                </a>
+                              </li>
+                          
+						</ul>
+					</li>
+				</ul>
+			</div>
+		
+	</li>
+	
+	<li>
+		
+		    <a href="https://www.amd.com/en/preferences.html">
+				<span class="newsletter icon"></span>
+				<span class="sr-only">Subscriptions</span>
+			</a>
+		
+		
+	</li>
+	
+</ul>
+
+
+
+
+
+
+					</div>
+				</div>
+			</section>
+			<section class="middle-menu menu py-45" id="footer-main-link">
+		        <div class="row  row-cols-md-5">
+		        	<div class="col-md-12 col-xl-1 ">
+		        	</div>
+	            	<div class="col-xl-2">
+	            		
+    
+    <div id="container-acd5e059b6" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+<div id="company-footer-nav" class="cmp-title">
+    <h6 class="cmp-title__text"><a class="cmp-title__link" href="#!">Company</a></h6>
+</div>
+
+    
+
+</div>
+<div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-d827d17e28" class="cmp-text">
+    <ul>
+<li><a href="/en/corporate.html">About AMD</a></li>
+<li><a href="/en/corporate/leadership.html">Management Team</a></li>
+<li><a href="/en/corporate/corporate-responsibility.html">Corporate Responsibility</a></li>
+<li><a href="/en/corporate/careers.html" target="_blank">Careers</a></li>
+<li><a href="/en/corporate/contacts.html">Contact Us</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+	            	</div>
+	            	<div class="col-xl-2">
+	            		
+    
+    <div id="container-f074d85277" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+<div id="news-and-events-footer-nav" class="cmp-title">
+    <h6 class="cmp-title__text"><a class="cmp-title__link" href="#!">News &amp; Events</a></h6>
+</div>
+
+    
+
+</div>
+<div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-9a382e995f" class="cmp-text">
+    <ul>
+<li><a href="https://newsroom.amd.com/">Newsroom</a></li>
+<li><a href="/en/corporate/events.html">Events</a></li>
+<li><a href="/en/newsroom/media-library.html">Media Library</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+	            	</div>
+	            	<div class="col-xl-2">
+	            		
+    
+    <div id="container-15c23e8817" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+<div id="community-footer-nav" class="cmp-title">
+    <h6 class="cmp-title__text"><a class="cmp-title__link" href="#!">Resources</a></h6>
+</div>
+
+    
+
+</div>
+<div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-5a43f6bfaf" class="cmp-text">
+    <ul>
+<li><a href="/en/developer.html">Developer Central</a></li>
+<li><a href="/en/blogs.html">Blogs</a></li>
+<li><a href="/en/resources/case-studies.html">Case Studies</a></li>
+<li><a href="https://webinar.amd.com/meet-the-experts-hub/en/home" target="_blank">Webinars</a></li>
+<li><a href="/en/resources.html">Explore Resources</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+	            	</div>
+	            	<div class="col-xl-2">
+	            		
+    
+    <div id="container-29f0745ac3" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+<div id="partner-footer-nav" class="cmp-title">
+    <h6 class="cmp-title__text"><a class="cmp-title__link" href="#!">Partners</a></h6>
+</div>
+
+    
+
+</div>
+<div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-df90796959" class="cmp-text">
+    <ul>
+<li><a href="/en/partner.html">AMD Partner Hub</a></li>
+<li><a href="/en/partner/about-partners/authorized-distributors.html">Authorized Distributors</a></li>
+<li><a href="/en/corporate/university-program.html">AMD University Program</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+	            	</div>
+	            	<div class="col-xl-2">
+	            		
+    
+    <div id="container-8255bfc6e8" class="cmp-container " data-component="cmp-container">
+        
+        
+        <div class="cmp-container__content   ">
+            
+            
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="title aem-GridColumn aem-GridColumn--default--12">
+<div id="investors-footer-nav" class="cmp-title">
+    <h6 class="cmp-title__text"><a class="cmp-title__link" href="#!">Investors</a></h6>
+</div>
+
+    
+
+</div>
+<div class="text aem-GridColumn aem-GridColumn--default--12">
+
+<div id="text-5c7d8c966f" class="cmp-text">
+    <ul>
+<li><a href="https://ir.amd.com/" target="_blank">Investor Relations</a></li>
+<li><a href="https://ir.amd.com/financial-information" target="_blank">Financial Information</a></li>
+<li><a href="https://ir.amd.com/leadership-governance/board-of-directors" target="_blank">Board of Directors</a></li>
+<li><a href="https://ir.amd.com/leadership-governance/governance-documents" target="_blank">Governance Documents</a></li>
+<li><a href="https://ir.amd.com/sec-filings" target="_blank">SEC Filings</a></li>
+</ul>
+
+</div>
+
+    
+
+
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+
+	            	</div>
+	            	<div class="col-md-12 col-xl-1 ">
+		        	</div>
+            	</div>
+           	</section>
+           	<section class="bottom-menu menu py-45">
+           		<div class="row d-flex align-items-center">
+	<div class="col-12 text-center">
+		<ul>
+			
+			
+				<li class="links"><a href="/en/legal/copyright.html">Terms and Conditions</a></li>
+			
+				<li class="links"><a href="/en/legal/privacy.html">Privacy</a></li>
+			
+				<li class="links"><a href="/en/legal/trademarks.html">Trademarks</a></li>
+			
+				<li class="links"><a href="https://www.amd.com/content/dam/amd/en/documents/corporate/cr/supply-chain-transparency.pdf" target="_blank">Supply Chain Transparency</a></li>
+			
+				<li class="links"><a href="/en/legal/competition.html">Fair &amp; Open Competition</a></li>
+			
+				<li class="links"><a href="https://www.amd.com/content/dam/amd/en/documents/corporate/amd-uk-tax-strategy.pdf" target="_blank">UK Tax Strategy</a></li>
+			
+				<li class="links"><a href="/en/legal/cookies.html">Cookies Policy</a></li>
+			
+			<li><a href="#cookiessettings" role="button" class="ot-sdk-show-settings">Cookie Settings</a></li>
+		</ul>
+	</div>
+</div>
+<div class="row d-flex align-items-center">
+	<div class="col-12 text-center">
+		<div>
+			<span class="copyright">© 2026 Advanced Micro Devices, Inc.</span>
+		</div>
+	</div>
+</div>
+       		</section>
+		</div>
+    </footer>
+</noindex></div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+
+    
+</div>
+
+    
+</div>
+
+        </div>
+    </div>
+
+    
+</div>
+
+
+		            	
+    
+    <script src="/etc.clientlibs/common-ui/clientlibs/clientlib-base.min.js"></script>
+
+ 
+    
+    <script src="/etc.clientlibs/common-ui/clientlibs/clientlib-webpack.min.js"></script>
+<script src="/etc.clientlibs/user-account/clientlibs/clientlib-webpack.min.js"></script>
+<script src="/etc.clientlibs/amd-site/clientlibs/clientlib-webpack.min.js"></script>
+
+
+    
+
+<script type="module" src="https://static.cloud.coveo.com/atomic/v3.59.2/atomic.esm.js"></script>
+    
+
+    
+
+    
+    
+    
+    
+	<template id="youtube-embed-modal">
+		<div class="modal fade" id="youtube-modal" tabindex="-1" aria-hidden="true">
+			<button type="button" class="btn-close btn-close-white position-fixed top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="modal-dialog modal-dialog-centered modal-xl">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="yt-embed" data-cmp-is="youtube-onetrust" data-cmp-cookie-settings-button="Edit Privacy Settings" data-cmp-watch-on-youtube="Watch on YouTube" data-cmp-play-label="Play" data-cmp-cookie-label="To watch YouTube content on this site, please change your privacy settings to enable cookies. Alternatively, click &#39;Watch on YouTube&#39; to view the video directly on YouTube. Your personal data will be processed by YouTube in compliance with its own privacy policy and cookies policy available on its website.">
+	<div class="yt-video cursor-disabled" data-function="youtube-video-placeholder"></div>
+	
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+	<template id="html5-video-embed-modal">
+		<div class="modal fade" id="html5-video-modal" tabindex="-1" aria-hidden="true">
+			<button type="button" class="btn-close btn-close-white position-fixed top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+			<div class="modal-dialog modal-dialog-centered modal-xl">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div data-function="html5-video-placeholder" data-pause-label="Pause" data-play-label="Play" data-stop-label="Stop" data-rewind-label="Rewind" data-forward-label="Forward"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+	
+
+
+		             </div>
+	             
+	        
+    <script type="text/javascript"  src="/u3qRwd/cf/tQ/5maA/ceIBygJgnWD0g/Q5Erpfu99kG7h0Du/CQYoAg/NA/47M2ZQTE4B"></script></body>
+</html>

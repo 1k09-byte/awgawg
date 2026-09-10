@@ -1,0 +1,63 @@
+<ContentDialog
+    x:Class="stellarisKIT.Controls.PresetPickerDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:services="using:stellarisKIT.Services"
+    Title="Game presets"
+    PrimaryButtonText="Add selected"
+    CloseButtonText="Cancel"
+    DefaultButton="Primary"
+    CornerRadius="12">
+
+    <ContentDialog.PrimaryButtonStyle>
+        <Style TargetType="Button" BasedOn="{StaticResource AccentButtonStyle}">
+            <Setter Property="CornerRadius" Value="4" />
+            <Setter Property="Padding" Value="11,5" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="MinHeight" Value="32" />
+        </Style>
+    </ContentDialog.PrimaryButtonStyle>
+    <ContentDialog.CloseButtonStyle>
+        <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+            <Setter Property="CornerRadius" Value="4" />
+            <Setter Property="Padding" Value="11,5" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="MinHeight" Value="32" />
+        </Style>
+    </ContentDialog.CloseButtonStyle>
+
+    <ContentDialog.Resources>
+        <x:Double x:Key="ContentDialogMaxWidth">720</x:Double>
+    </ContentDialog.Resources>
+
+    <StackPanel Spacing="8" Width="660">
+        <TextBlock Text="Tuned process rules for popular games. Games get High priority + boost, launchers get Eco. Uncheck anything you don't play."
+                   TextWrapping="Wrap" Style="{StaticResource BodyTextBlockStyle}"
+                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+        <CheckBox x:Name="AffinityCheck" Content="Include CPU affinity (games → fastest isolated cores, launchers → efficient cores)"
+                  IsChecked="True" />
+        <Grid>
+            <TextBlock Text="Games" Style="{StaticResource BodyTextBlockStyle}" FontWeight="SemiBold" VerticalAlignment="Center" />
+            <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Button Content="Select all" Click="SelectAll_Click" FontSize="12" Padding="10,4,10,4" />
+                <Button Content="Clear" Click="Clear_Click" FontSize="12" Padding="10,4,10,4" />
+            </StackPanel>
+        </Grid>
+        <Border Background="{ThemeResource LayerFillColorDefaultBrush}" BorderBrush="{ThemeResource DividerStrokeColorDefault}" BorderThickness="1" CornerRadius="8">
+            <ListView x:Name="PresetList" ItemsSource="{x:Bind Presets, Mode=OneWay}"
+                      SelectionMode="Multiple" MaxHeight="380" ShowsScrollingPlaceholders="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="services:GamePreset">
+                        <StackPanel Padding="8,6" Spacing="2">
+                            <TextBlock Text="{x:Bind Name}" FontSize="13" FontWeight="SemiBold" />
+                            <TextBlock Text="{x:Bind Description}" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Border>
+        <TextBlock Text="Rules for patterns you already have are skipped. Affinity is computed from this PC (P-cores, one CCD, or one thread per core) — unchecked means no affinity. Presets never touch anti-cheat (Vanguard, EasyAntiCheat, BattlEye) or system processes."
+                   TextWrapping="Wrap" Style="{StaticResource CaptionTextBlockStyle}"
+                   Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+    </StackPanel>
+</ContentDialog>

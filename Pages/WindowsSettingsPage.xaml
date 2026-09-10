@@ -1,0 +1,134 @@
+<Page
+    x:Class="stellarisKIT.Pages.WindowsSettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:toolkit="using:CommunityToolkit.WinUI.Controls"
+    xmlns:vm="using:stellarisKIT.ViewModels"
+    xmlns:models="using:stellarisKIT.Models"
+    xmlns:converters="using:stellarisKIT.Converters">
+    <Page.Resources>
+        <converters:NullToIndeterminateConverter x:Key="NullToIndeterminateConverter" />
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </Page.Resources>
+    <Page.DataContext>
+        <vm:WindowsSettingsViewModel />
+    </Page.DataContext>
+    <Grid x:Name="RootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="WS — Windows Settings" Margin="36,24,36,12" Style="{StaticResource TitleTextBlockStyle}" />
+        <ScrollViewer Grid.Row="1" Padding="36,0,36,24" VerticalScrollBarVisibility="Auto">
+            <StackPanel MaxWidth="1064" HorizontalAlignment="Left" Spacing="4">
+                <InfoBar IsOpen="{Binding HasError}" Severity="{Binding MessageSeverity}" Message="{Binding Message}" Margin="0,0,0,12" />
+                <TextBlock Text="Multimedia Class Scheduler Service" Style="{StaticResource BodyStrongTextBlockStyle}" Margin="1,24,0,6" />
+                <toolkit:SettingsCard Header="MMCSS service" Description="{Binding MmcssServiceStatusText, Mode=OneWay}">
+                    <ToggleSwitch IsOn="{Binding MmcssServiceEnabled, Mode=TwoWay}" Toggled="ServiceToggle_Toggled" OnContent="Enabled" OffContent="Disabled" IsEnabled="{Binding CanEdit}" />
+                </toolkit:SettingsCard>
+                <toolkit:SettingsCard Header="Serialize Timer Expiration" Description="{Binding SerializeTimerStatusText, Mode=OneWay}">
+                    <ToggleSwitch IsOn="{Binding SerializeTimerExpiration, Mode=TwoWay}" Toggled="PowerToggle_Toggled" OnContent="On" OffContent="Off" IsEnabled="{Binding CanEdit}" />
+                </toolkit:SettingsCard>
+                <toolkit:SettingsCard Header="Disable Interrupt Routing" Description="{Binding DisableInterruptRoutingStatusText, Mode=OneWay}">
+                    <ToggleSwitch IsOn="{Binding DisableInterruptRouting, Mode=TwoWay}" Toggled="PowerToggle_Toggled" OnContent="On" OffContent="Off" IsEnabled="{Binding CanEdit}" />
+                </toolkit:SettingsCard>
+                <TextBlock Text="Edit task-category values under the Windows MMCSS registry configuration. Changes require administrator rights." TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="1,0,0,12" />
+                <Grid ColumnSpacing="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <ListView Grid.Column="0" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory, Mode=TwoWay}" SelectionMode="Single" MinHeight="360">
+                        <ListView.ItemTemplate>
+                            <DataTemplate x:DataType="models:MmcssCategoryItem">
+                                <Grid Padding="12,10" ColumnSpacing="12">
+                                    <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Name}" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                                        <TextBlock Text="{Binding StateText}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" FontSize="12" />
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <StackPanel Grid.Column="1" Spacing="4">
+                        <toolkit:SettingsCard Header="Category status" Description="A category has no documented enabled flag. This shows whether its registry subkey is explicitly configured; Windows uses defaults when it is absent.">
+                            <TextBlock Text="{Binding IsConfigured, Mode=OneWay}" HorizontalAlignment="Right" />
+                        </toolkit:SettingsCard>
+                        <toolkit:SettingsCard Header="Priority" Description="MMCSS task priority. Valid values are 0 through 31.">
+                            <NumberBox Value="{Binding Priority, Mode=TwoWay}" Minimum="0" Maximum="31" SmallChange="1" LargeChange="5" SpinButtonPlacementMode="Compact" Width="160" HorizontalAlignment="Right" />
+                        </toolkit:SettingsCard>
+                        <toolkit:SettingsCard Header="Scheduling Category" Description="The MMCSS scheduling category for this task.">
+                            <ComboBox ItemsSource="{Binding SchedulingCategories}" SelectedItem="{Binding SchedulingCategory, Mode=TwoWay}" Width="160" HorizontalAlignment="Right" />
+                        </toolkit:SettingsCard>
+                        <toolkit:SettingsCard Header="SFIO Priority" Description="The storage I/O priority for this task.">
+                            <ComboBox ItemsSource="{Binding SfioPriorities}" SelectedItem="{Binding SfioPriority, Mode=TwoWay}" Width="160" HorizontalAlignment="Right" />
+                        </toolkit:SettingsCard>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8" Margin="0,12,0,0">
+                            <Button Content="Save" Command="{Binding SaveCommand}" Style="{StaticResource AccentButtonStyle}" />
+                            <Button Content="Revert" Command="{Binding RevertCommand}" />
+                            <Button Content="Restore Defaults" Command="{Binding RestoreDefaultsCommand}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <TextBlock Text="Windhawk" Style="{StaticResource BodyStrongTextBlockStyle}" Margin="1,24,0,6" />
+                <InfoBar
+                    IsOpen="{Binding Windhawk.HasMessage, Mode=OneWay}"
+                    Severity="{Binding Windhawk.MessageSeverity}"
+                    Message="{Binding Windhawk.Message}"
+                    Margin="0,0,0,12" />
+                <toolkit:SettingsCard Header="Windhawk" Description="{Binding Windhawk.InstallStatusText, Mode=OneWay}">
+                    <toolkit:SettingsCard.HeaderIcon>
+                        <FontIcon Glyph="&#xE74E;" />
+                    </toolkit:SettingsCard.HeaderIcon>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <ProgressRing
+                            Width="20" Height="20"
+                            IsActive="{Binding Windhawk.IsBusy, Mode=OneWay}"
+                            Visibility="{Binding Windhawk.IsBusy, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}" />
+                        <Button
+                            Content="Install Windhawk &amp; Import Settings"
+                            Style="{StaticResource AccentButtonStyle}"
+                            Click="StartWindhawk_Click"
+                            IsEnabled="{Binding Windhawk.CanRun, Mode=OneWay}" />
+                    </StackPanel>
+                </toolkit:SettingsCard>
+                <toolkit:SettingsCard
+                    Header="Backup file"
+                    Description="A windhawk-user-data-v1 JSON export from Windhawk's backup/restore feature.">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <StackPanel Orientation="Vertical" MaxWidth="260">
+                            <TextBlock
+                                Text="{Binding Windhawk.BackupFileName, Mode=OneWay}"
+                                TextTrimming="CharacterEllipsis"
+                                Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                            <CheckBox
+                                IsChecked="{Binding Windhawk.UseBundledDefaults, Mode=TwoWay}"
+                                Content="Use bundled default mod list"
+                                Margin="0,4,0,0" />
+                        </StackPanel>
+                        <Button
+                            Content="Browse..."
+                            Click="BrowseBackup_Click" />
+                    </StackPanel>
+                </toolkit:SettingsCard>
+                <toolkit:SettingsCard
+                    Header="Progress"
+                    Description="{Binding Windhawk.StatusText, Mode=OneWay}">
+                    <ProgressBar
+                        Width="200"
+                        Value="{Binding Windhawk.DownloadPercent, Mode=OneWay, FallbackValue=0}"
+                        Maximum="100"
+                        IsIndeterminate="{Binding Windhawk.DownloadPercent, Mode=OneWay, Converter={StaticResource NullToIndeterminateConverter}}"
+                        Visibility="{Binding Windhawk.IsBusy, Mode=OneWay, Converter={StaticResource BoolToVisibilityConverter}}" />
+                </toolkit:SettingsCard>
+                <TextBlock
+                    Text="Windhawk is a third-party tool (windhawk.net). Its latest stable release is downloaded from the official GitHub releases and installed silently with the vendor's documented switches. Existing Windhawk settings are backed up before any import."
+                    TextWrapping="Wrap"
+                    Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                    Margin="1,0,0,12" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

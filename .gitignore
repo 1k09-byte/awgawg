@@ -1,0 +1,34 @@
+# Build artifacts
+bin/
+obj/
+Build/
+AppPackages/
+.vs/
+
+# User-specific files
+*.user
+*.suo
+*.rsuser
+
+# Publish output
+publish/
+
+# Local reference clones (kept outside this repo)
+_gallery-reference/
+
+# Temp/dev assets not part of the shipped app
+Assets/_temp/
+
+# Temporary build logs
+*.log
+build.txt
+build2.log
+compile.txt
+msbuild.binlog
+
+# Test/scratch files
+test.cs
+test.png
+
+# IDE files
+stellarisKIT.csproj.user

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="stellarisKIT.Pages.GpuDriversPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:stellarisKIT.Pages"
+    xmlns:models="using:stellarisKIT.Models"
+    xmlns:services="using:stellarisKIT.Services"
+    xmlns:animations="using:Microsoft.UI.Xaml.Media.Animation"
+    xmlns:dev="using:DevWinUI"
+    NavigationCacheMode="Enabled">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <EntranceNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <Page.Resources>
+        <Style
+            x:Key="SettingsSectionHeaderTextBlockStyle"
+            BasedOn="{StaticResource BodyStrongTextBlockStyle}"
+            TargetType="TextBlock">
+            <Style.Setters>
+                <Setter Property="Margin" Value="1,30,0,6" />
+            </Style.Setters>
+        </Style>
+
+        <DataTemplate x:Key="GpuDriverCardTemplate" x:DataType="models:GpuDriverItem">
+            <Button
+                Height="220"
+                Margin="0,0,0,0"
+                Padding="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="{ThemeResource LayerFillColorDefaultBrush}"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                BorderThickness="1"
+                Click="DriverCard_Click"
+                CornerRadius="8"
+                Tag="{x:Bind}"
+                Visibility="{x:Bind local:GpuDriversPage.BoolToVis(IsVisible), Mode=OneWay}">
+                <Button.OpacityTransition>
+                    <ScalarTransition Duration="0:0:0.3" />
+                </Button.OpacityTransition>
+                <Button.ScaleTransition>
+                    <Vector3Transition Duration="0:0:0.3" />
+                </Button.ScaleTransition>
+                <Grid Padding="16" UseLayoutRounding="True">
+                    <StackPanel
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Spacing="8">
+                        <!-- Vendor logo, no tile -->
+                        <Border
+                            Width="64"
+                            Height="48"
+                            Padding="8"
+                            HorizontalAlignment="Center"
+                            Background="Transparent"
+                            CornerRadius="10">
+                            <Image
+                                Source="{x:Bind local:GpuDriversPage.VendorIcon(Vendor), Mode=OneWay}"
+                                Stretch="Uniform"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center" />
+                        </Border>
+                        <!-- Driver name -->
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource BodyStrongTextBlockStyle}"
+                            Text="{x:Bind Name}"
+                            TextAlignment="Center"
+                            TextWrapping="Wrap" />
+                        <!-- Status text -->
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                            Style="{StaticResource CaptionTextBlockStyle}"
+                            Text="{x:Bind StatusText, Mode=OneWay}"
+                            TextAlignment="Center" />
+                    </StackPanel>
+                </Grid>
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="DetectedGpuTemplate" x:DataType="services:DetectedGpu">
+            <Grid
+                Padding="12,8"
+                Background="{ThemeResource LayerFillColorDefaultBrush}"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                BorderThickness="1"
+                CornerRadius="8"
+                ColumnSpacing="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Border
+                    Grid.Column="0"
+                    Width="44"
+                    Height="28"
+                    Padding="4"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    CornerRadius="6">
+                    <Image
+                        Source="{x:Bind local:GpuDriversPage.VendorIcon(Vendor), Mode=OneWay}"
+                        Stretch="Uniform"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center" />
+                </Border>
+                <TextBlock
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource BodyTextBlockStyle}"
+                    Text="{x:Bind Name}"
+                    TextTrimming="CharacterEllipsis" />
+                <TextBlock
+                    Grid.Column="2"
+                    VerticalAlignment="Center"
+                    Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                    Style="{StaticResource CaptionTextBlockStyle}"
+                    Text="{x:Bind DriverVersion}" />
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid x:Name="RootGrid" UseLayoutRounding="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- The XAML Dialog -->
+        <ContentDialog x:Name="DriverDetailsDialog"
+                       Grid.RowSpan="2"
+                       Style="{StaticResource DefaultContentDialogStyle}"
+                       Title="{x:Null}"
+                       PrimaryButtonText=""
+                       CloseButtonText="{x:Bind local:GpuDriversPage.GetCloseButtonText(ViewModel.SelectedDriver.Status), Mode=OneWay}">
+            <StackPanel Spacing="16">
+                <!-- Title Panel -->
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                    <Border
+                        Width="36"
+                        Height="28"
+                        Padding="4"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="Transparent"
+                        CornerRadius="6">
+                        <Image
+                            Source="{x:Bind local:GpuDriversPage.VendorIcon(ViewModel.SelectedDriver.Vendor), Mode=OneWay}"
+                            Stretch="Uniform"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center" />
+                    </Border>
+                    <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" VerticalAlignment="Center" Text="{x:Bind ViewModel.SelectedDriver.Name, Mode=OneWay}"/>
+                </StackPanel>
+
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Text="{x:Bind ViewModel.SelectedDriver.Description, Mode=OneWay}"/>
+
+                <!-- Version rows -->
+                <StackPanel Spacing="8">
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Text="Installed version" VerticalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Style="{StaticResource BodyTextBlockStyle}" Text="{x:Bind ViewModel.SelectedDriver.InstalledVersion, Mode=OneWay, FallbackValue='Not detected'}" />
+                    </Grid>
+                    <Grid ColumnSpacing="12">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Text="Latest version" VerticalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Style="{StaticResource BodyTextBlockStyle}" Text="{x:Bind ViewModel.SelectedDriver.LatestVersion, Mode=OneWay, FallbackValue='Not checked yet'}" />
+                    </Grid>
+                    
+                    <!-- Dynamic Component UI for NVIDIA/AMD -->
+                    <StackPanel Spacing="8" Margin="0,12,0,0">
+                        <TextBlock Text="Package options" Style="{StaticResource BodyStrongTextBlockStyle}" Visibility="{x:Bind local:GpuDriversPage.CountToVis(ViewModel.NvidiaPackages.Count), Mode=OneWay}" />
+                        <ComboBox ItemsSource="{x:Bind ViewModel.NvidiaPackages, Mode=OneWay}"
+                                  SelectedItem="{x:Bind ViewModel.SelectedNvidiaPackage, Mode=TwoWay}"
+                                  Visibility="{x:Bind local:GpuDriversPage.CountToVis(ViewModel.NvidiaPackages.Count), Mode=OneWay}"
+                                  HorizontalAlignment="Stretch">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate x:DataType="services:NvidiaDriverPackage">
+                                    <StackPanel Orientation="Horizontal" Spacing="8">
+                                        <TextBlock Text="{x:Bind Version}" />
+                                        <TextBlock Text="{x:Bind ReleaseDateTime}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+                        </ComboBox>
+
+                        <TextBlock Text="Package options" Style="{StaticResource BodyStrongTextBlockStyle}" Visibility="{x:Bind local:GpuDriversPage.CountToVis(ViewModel.AmdPackages.Count), Mode=OneWay}" />
+                        <ListView ItemsSource="{x:Bind ViewModel.AmdPackages, Mode=OneWay}"
+                                  Visibility="{x:Bind local:GpuDriversPage.CountToVis(ViewModel.AmdPackages.Count), Mode=OneWay}"
+                                  MaxHeight="200"
+                                  SelectionMode="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate x:DataType="services:AmdDriverPackageConfig">
+                                    <CheckBox Content="{x:Bind ProductName}" IsChecked="{x:Bind IsSelected, Mode=TwoWay}" ToolTipService.ToolTip="{x:Bind Description}" />
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                    
+                    <TextBlock
+                        Foreground="{ThemeResource SystemFillColorCriticalBrush}"
+                        Style="{StaticResource CaptionTextBlockStyle}"
+                        Text="{x:Bind ViewModel.SelectedDriver.ErrorMessage, Mode=OneWay}"
+                        TextWrapping="Wrap"
+                        Visibility="{x:Bind local:GpuDriversPage.NotEmptyToVisibility(ViewModel.SelectedDriver.ErrorMessage), Mode=OneWay}" />
+                </StackPanel>
+
+                <!-- Status Checkmark (only visible when done / up to date) -->
+                <StackPanel Orientation="Horizontal" Spacing="8" Visibility="{x:Bind local:GpuDriversPage.IsDoneToVisibility(ViewModel.SelectedDriver.Status), Mode=OneWay}">
+                    <FontIcon Glyph="&#xE73E;" FontSize="16" Foreground="{ThemeResource SystemFillColorSuccessBrush}" />
+                    <TextBlock Text="{x:Bind ViewModel.SelectedDriver.StatusText, Mode=OneWay}" VerticalAlignment="Center" Style="{StaticResource BodyTextBlockStyle}" />
+                </StackPanel>
+
+                <!-- Action Buttons at bottom -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8">
+                    <Button x:Name="DialogVendorBtn"
+                            Content="Vendor page"
+                            Click="DialogVendorBtn_Click"/>
+
+                    <dev:ProgressButton x:Name="DialogProgressBtn"
+                                        Content="{x:Bind ViewModel.SelectedDriver.PrimaryActionText, Mode=OneWay}"
+                                        CheckedContent="{x:Bind ViewModel.InstallStatusText, Mode=OneWay}"
+                                        IsChecked="{x:Bind ViewModel.IsInstalling, Mode=OneWay}"
+                                        IsIndeterminateProgressRing="false"
+                                        ProgressRingVisibility="Collapsed"
+                                        IsEnabled="{x:Bind local:GpuDriversPage.Not(ViewModel.IsInstalling), Mode=OneWay}"
+                                        Click="DialogProgressBtn_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ContentDialog>
+
+        <ScrollViewer
+            Grid.Row="1"
+            Padding="36,0,36,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            VerticalScrollBarVisibility="Auto"
+            VerticalScrollMode="Auto">
+            <StackPanel
+                Margin="0,8,0,32"
+                HorizontalAlignment="Stretch"
+                Spacing="32">
+
+                <!-- Detected GPUs Section -->
+                <StackPanel Spacing="16">
+                    <TextBlock Text="Detected GPUs" Style="{ThemeResource SubtitleTextBlockStyle}" VerticalAlignment="Center" />
+                    <TextBlock
+                        Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                        Style="{StaticResource CaptionTextBlockStyle}"
+                        Text="{x:Bind ViewModel.DetectStatusText, Mode=OneWay}" />
+                    <ItemsRepeater
+                        x:Name="DetectedGpuList"
+                        ItemsSource="{x:Bind ViewModel.DetectedGpus, Mode=OneWay}"
+                        ItemTemplate="{StaticResource DetectedGpuTemplate}"
+                        HorizontalAlignment="Stretch">
+                        <ItemsRepeater.Layout>
+                            <StackLayout Spacing="8" />
+                        </ItemsRepeater.Layout>
+                    </ItemsRepeater>
+                </StackPanel>
+
+                <!-- Drivers Section -->
+                <StackPanel Spacing="16">
+                    <TextBlock Text="Drivers" Style="{ThemeResource SubtitleTextBlockStyle}" />
+                    <ItemsRepeater x:Name="DriverGrid" ItemsSource="{x:Bind ViewModel.VisibleDrivers, Mode=OneWay}"
+                                   ItemTemplate="{StaticResource GpuDriverCardTemplate}"
+                                   HorizontalAlignment="Left">
+                        <ItemsRepeater.Layout>
+                            <UniformGridLayout MinItemWidth="200"
+                                             MinItemHeight="220"
+                                             MinColumnSpacing="12"
+                                             MinRowSpacing="12"
+                                             Orientation="Horizontal"
+                                             ItemsJustification="Start"
+                                             ItemsStretch="None" />
+                        </ItemsRepeater.Layout>
+                    </ItemsRepeater>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

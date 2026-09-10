@@ -1,0 +1,152 @@
+{
+  "format": "windhawk-user-data-v1",
+  "appSettings": {
+    "language": "en",
+    "theme": "auto",
+    "disableUpdateCheck": false,
+    "devModeOptOut": false,
+    "hideTrayIcon": true,
+    "alwaysCompileModsLocally": false,
+    "dontAutoShowToolkit": false,
+    "modTasksDialogDelay": 2000,
+    "loggingVerbosity": 0,
+    "engine": {
+      "loggingVerbosity": 0,
+      "include": [],
+      "exclude": [
+        "VirtualBox.exe",
+        "Wow.exe",
+        "WowClassic.exe",
+        "FortniteLauncher.exe",
+        "FortniteClient-Win64-Shipping.exe",
+        "FortniteClient-Win64-Shipping_EAC_EOS"
+      ],
+      "injectIntoCriticalProcesses": false,
+      "injectIntoIncompatiblePrograms": false,
+      "injectIntoGames": false
+    }
+  },
+  "mods": [
+    {
+      "modId": "explorer-context-menu-classic",
+      "version": "1.0.4",
+      "name": "Classic context menu on Windows 11",
+      "settings": {
+        "overrideWithCtrl": 1
+      }
+    },
+    {
+      "modId": "explorer-details-better-file-sizes",
+      "version": "1.5.2",
+      "name": "Better file sizes in Explorer details",
+      "settings": {
+        "calculateFolderSizes": "everything",
+        "sortSizesMixFolders": 1,
+        "disableKbOnlySizes": 1,
+        "useIecTerms": 0
+      }
+    },
+    {
+      "modId": "extension-change-no-warning",
+      "version": "1.0.2",
+      "name": "Turn off change file extension warning"
+    },
+    {
+      "modId": "f1-blocker",
+      "version": "1.0.1",
+      "name": "F1 Blocker"
+    },
+    {
+      "modId": "modernize-folder-picker-dialog",
+      "version": "1.0.1",
+      "name": "Modernize Folder Picker Dialog"
+    },
+    {
+      "modId": "slick-window-arrangement",
+      "version": "1.0.4",
+      "name": "Slick Window Arrangement",
+      "settings": {
+        "SnapWindowsWhenDragging": 1,
+        "SnapWindowsDistance": 25,
+        "KeysToDisableSnapping.Ctrl": 0,
+        "KeysToDisableSnapping.Alt": 1,
+        "KeysToDisableSnapping.Shift": 0,
+        "SlidingAnimation": 1,
+        "SnapWindowsWhenSliding": 1,
+        "SlidingAnimationSlowdown": 15
+      }
+    },
+    {
+      "modId": "start-menu-open-location",
+      "version": "1.0.1",
+      "name": "Start menu open location",
+      "settings": {
+        "monitor": 0,
+        "monitorInterfaceName": ""
+      }
+    },
+    {
+      "modId": "taskbar-dock-animation",
+      "version": "1.10.0",
+      "name": "Taskbar Dock Animation"
+    },
+    {
+      "modId": "taskbar-notification-icons-show-all",
+      "version": "1.1",
+      "name": "Always show all taskbar tray icons",
+      "settings": {
+        "mode": "showAll"
+      }
+    },
+    {
+      "modId": "taskbar-restart-explorer",
+      "version": "1.1",
+      "name": "Taskbar Restart Explorer"
+    },
+    {
+      "modId": "windows-11-settings-styler",
+      "version": "1.3",
+      "name": "Windows 11 Settings Styler",
+      "settings": {
+        "theme": "Translucent_Settings11",
+        "styleConstants[0]": "",
+        "controlStyles[0].target": "",
+        "controlStyles[0].styles[0]": "",
+        "themeResourceVariables[0]": ""
+      }
+    },
+    {
+      "modId": "windows-11-start-menu-styler",
+      "version": "2.1",
+      "name": "Windows 11 Start Menu Styler",
+      "settings": {
+        "theme": "TranslucentStartMenu",
+        "disableNewStartMenuLayout": "",
+        "styleConstants[0]": "",
+        "controlStyles[0].target": "ScrollViewer > ScrollContentPresenter > Border > StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Frame#StartFrame > ContentPresenter > StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > Grid#SideBySidePinnedWrapper > ScrollViewer#SideBySidePinnedScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > Grid#SideBySidePinnedContent > Grid#TopLevelSuggestionsRoot > Grid#TopLevelSuggestionsContainerParent > Grid#TopLevelSuggestionsContainer > StartMenu.RecommendedReactNativeViewControl > ContentPresenter > ExperienceExtensions.ReactNativeExperienceViewControl > Grid#RootViewContainer > Microsoft.ReactNative.ReactRootView > Microsoft.ReactNative.ViewPanel > Microsoft.ReactNative.ViewPanel > GridView#RecommendedList",
+        "controlStyles[0].styles[0]": "Height=170",
+        "controlStyles[1].target": "ScrollViewer > ScrollContentPresenter > Border > StartMenu.StartBlendedFlexFrame > Grid#FrameRoot > Grid#AnimationRoot > Grid#MainMenu > Grid#MainContent > Frame#StartFrame > ContentPresenter > StartMenu.StartHome > Grid#PageRoot > SemanticZoom#TopLevelRoot > Grid > ScrollViewer#ScrollViewer > ScrollContentPresenter#ScrollContentPresenter > Grid > ContentPresenter#ZoomedInPresenter > GridView#AllAppsGrid > Border > Grid#SideBySidePinnedWrapper > ScrollViewer#SideBySidePinnedScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > Grid#SideBySidePinnedContent > Grid#TopLevelSuggestionsRoot > Grid#TopLevelSuggestionsContainerParent > Grid#TopLevelSuggestionsContainer > StartMenu.RecommendedReactNativeViewControl > ContentPresenter > ExperienceExtensions.ReactNativeExperienceViewControl > Grid#RootViewContainer > Microsoft.ReactNative.ReactRootView > Microsoft.ReactNative.ViewPanel > Microsoft.ReactNative.ViewPanel > GridView#RecommendedList > Border > ScrollViewer#ScrollViewer > Border#Root > Grid > ScrollContentPresenter#ScrollContentPresenter > ItemsPresenter > ItemsWrapGrid > GridViewItem#RecommendedItemRoot0",
+        "controlStyles[1].styles[0]": "MinWidth=220",
+        "controlStyles[1].styles[1]": "MaxWidth=220",
+        "themeResourceVariables[0]": "",
+        "webContentStyles[0].target": "#temporaryMessages",
+        "webContentStyles[0].styles[0]": "display: none !important",
+        "webContentCustomJs": ""
+      }
+    },
+    {
+      "modId": "windows-11-taskbar-styler",
+      "version": "2.0",
+      "name": "Windows 11 Taskbar Styler",
+      "settings": {
+        "theme": "Luminosity_variant_Dock",
+        "styleConstants[0]": "",
+        "controlStyles[0].target": "",
+        "controlStyles[0].styles[0]": "",
+        "themeResourceVariables[0]": "",
+        "clickThroughTaskbar": 0,
+        "xamlDiagnosticsHandling": "alert"
+      }
+    }
+  ]
+}

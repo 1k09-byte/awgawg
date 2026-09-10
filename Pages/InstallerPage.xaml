@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="stellarisKIT.Pages.InstallerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:stellarisKIT.Pages"
+    xmlns:models="using:stellarisKIT.Models"
+    xmlns:animations="using:Microsoft.UI.Xaml.Media.Animation"
+    xmlns:dev="using:DevWinUI"
+    NavigationCacheMode="Enabled">
+    <Page.Transitions>
+        <TransitionCollection>
+            <NavigationThemeTransition>
+                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                    <EntranceNavigationTransitionInfo />
+                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+            </NavigationThemeTransition>
+        </TransitionCollection>
+    </Page.Transitions>
+
+    <Page.Resources>
+        <Style
+            x:Key="SettingsSectionHeaderTextBlockStyle"
+            BasedOn="{StaticResource BodyStrongTextBlockStyle}"
+            TargetType="TextBlock">
+            <Style.Setters>
+                <Setter Property="Margin" Value="1,30,0,6" />
+            </Style.Setters>
+        </Style>
+
+        <!-- Card button style: square card with themed background, border, corner radius -->
+        <Style x:Key="BrowserCardButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="160" />
+            <Setter Property="Height" Value="160" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="CornerRadius" Value="12" />
+            <Setter Property="Background" Value="{ThemeResource CardBackgroundFillColorDefaultBrush}" />
+            <Setter Property="BorderBrush" Value="{ThemeResource ControlStrokeColorDefaultBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+
+        <DataTemplate x:Key="InstallerCardTemplate" x:DataType="models:BrowserInstallItem">
+            <Button
+                x:Name="CardRoot"
+                Height="220"
+                Margin="0,0,0,0"
+                Padding="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="{ThemeResource LayerFillColorDefaultBrush}"
+                BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                BorderThickness="1"
+                Click="BrowserCard_Click"
+                CornerRadius="8"
+                Tag="{x:Bind}"
+                Visibility="{x:Bind local:InstallerPage.BoolToVis(IsVisible), Mode=OneWay}">
+                <Button.OpacityTransition>
+                    <ScalarTransition Duration="0:0:0.3" />
+                </Button.OpacityTransition>
+                <Button.ScaleTransition>
+                    <Vector3Transition Duration="0:0:0.3" />
+                </Button.ScaleTransition>
+                <Grid Padding="16" UseLayoutRounding="True">
+                    <StackPanel
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Spacing="8">
+                        <!-- Large browser icon -->
+                        <Image
+                            HorizontalAlignment="Center"
+                            Width="48"
+                            Height="48"
+                            Source="{x:Bind ImagePath}" />
+                        <!-- Browser name -->
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            Style="{StaticResource BodyStrongTextBlockStyle}"
+                            Text="{x:Bind Name}"
+                            TextAlignment="Center" />
+                        <!-- Status text container: only active states (downloading /
+                             installing / failed / done). No static "Install" caption. -->
+                        <Grid HorizontalAlignment="Center">
+                            <!-- Normal status text -->
+                            <TextBlock
+                                Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                Style="{StaticResource CaptionTextBlockStyle}"
+                                Text="{x:Bind StatusText, Mode=OneWay}"
+                                TextAlignment="Center"
+                                Visibility="{x:Bind local:InstallerPage.StatusToActiveVisibility(Status), Mode=OneWay}" />
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </Button>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid x:Name="RootGrid" UseLayoutRounding="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- The XAML Dialog -->
+        <ContentDialog x:Name="BrowserDetailsDialog"
+                       Grid.RowSpan="2"
+                       Style="{StaticResource DefaultContentDialogStyle}"
+                       Title="{x:Null}"
+                       PrimaryButtonText=""
+                       CloseButtonText="{x:Bind local:InstallerPage.GetCloseButtonText(ViewModel.SelectedBrowser.Status), Mode=OneWay}">
+            <!-- 
+                 We hide Title natively and put the title inside the content panel for better icon alignment 
+            -->
+            <StackPanel Spacing="16">
+                <!-- Title Panel -->
+                <StackPanel Orientation="Horizontal" Spacing="12">
+                     <Image Width="24" Height="24" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{x:Bind ViewModel.SelectedBrowser.ImagePath, Mode=OneWay}"/>
+                     <TextBlock Style="{StaticResource SubtitleTextBlockStyle}" VerticalAlignment="Center" Text="{x:Bind ViewModel.SelectedBrowser.Name, Mode=OneWay}"/>
+                </StackPanel>
+                
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource BodyTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Text="{x:Bind ViewModel.SelectedBrowser.Description, Mode=OneWay}"/>
+
+                <!-- Extensions List -->
+                <ItemsRepeater ItemsSource="{x:Bind ViewModel.SelectedBrowser.Extensions, Mode=OneWay}">
+                    <ItemsRepeater.ItemTemplate>
+                        <DataTemplate x:DataType="models:ExtensionItem">
+                            <CheckBox 
+                                IsChecked="{x:Bind IsSelected, Mode=TwoWay}" 
+                                IsEnabled="{x:Bind IsAvailable, Mode=OneWay}" 
+                                Margin="0,8,0,0">
+                                <StackPanel>
+                                    <TextBlock Text="{x:Bind Name, Mode=OneWay}" Style="{StaticResource BodyStrongTextBlockStyle}" />
+                                    <TextBlock Text="{x:Bind Description, Mode=OneWay}" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                                </StackPanel>
+                            </CheckBox>
+                        </DataTemplate>
+                    </ItemsRepeater.ItemTemplate>
+                </ItemsRepeater>
+
+                <!-- Status Checkmark (only visible if installed) -->
+                <StackPanel Orientation="Horizontal" Spacing="8" Visibility="{x:Bind local:InstallerPage.IsInstalledToVisibility(ViewModel.SelectedBrowser.Status), Mode=OneWay}">
+                    <FontIcon Glyph="&#xE73E;" FontSize="16" Foreground="{ThemeResource SystemFillColorSuccessBrush}" />
+                    <TextBlock Text="{x:Bind ViewModel.SelectedBrowser.StatusText, Mode=OneWay}" VerticalAlignment="Center" Style="{StaticResource BodyTextBlockStyle}" />
+                </StackPanel>
+
+                <!-- Action Button at bottom (aligned right, mimicking dialog button) -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8">
+                    <Button x:Name="DialogUninstallBtn"
+                            Content="Uninstall"
+                            Foreground="{ThemeResource SystemFillColorCriticalBrush}"
+                            Visibility="{x:Bind local:InstallerPage.IsInstalledToVisibility(ViewModel.SelectedBrowser.Status), Mode=OneWay}"
+                            IsEnabled="{x:Bind local:InstallerPage.Not(ViewModel.IsInstalling), Mode=OneWay}"
+                            Click="DialogUninstallBtn_Click"/>
+
+                    <dev:ProgressButton x:Name="DialogProgressBtn"
+                                        Content="Install"
+                                        CheckedContent="{x:Bind ViewModel.InstallStatusText, Mode=OneWay}"
+                                        IsChecked="{x:Bind ViewModel.IsInstalling, Mode=OneWay}"
+                                        IsIndeterminateProgressRing="false"
+                                        ProgressRingVisibility="Collapsed"
+                                        IsEnabled="{x:Bind local:InstallerPage.Not(ViewModel.IsInstalling), Mode=OneWay}"
+                                        Visibility="{x:Bind local:InstallerPage.StatusToNotInstalledVisibility(ViewModel.SelectedBrowser.Status), Mode=OneWay}"
+                                        Click="DialogProgressBtn_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ContentDialog>
+
+        <ScrollViewer
+            Grid.Row="1"
+            Padding="36,0,36,0"
+            VerticalScrollBarVisibility="Auto"
+            VerticalScrollMode="Auto">
+            <StackPanel
+                MaxWidth="1064"
+                Margin="0,8,0,32"
+                HorizontalAlignment="Left"
+                Spacing="32">
+                <!-- Visibility Toggle removed per user request -->
+
+                <!-- Web Browsers Section -->
+                <StackPanel Spacing="16">
+                    <TextBlock Text="Web Browsers" Style="{ThemeResource SubtitleTextBlockStyle}" />
+                    <ItemsRepeater x:Name="BrowserGrid" ItemsSource="{x:Bind ViewModel.VisibleBrowsers, Mode=OneWay}"
+                                   ItemTemplate="{StaticResource InstallerCardTemplate}"
+                                   HorizontalAlignment="Left">
+                        <ItemsRepeater.Layout>
+                            <UniformGridLayout MinItemWidth="200"
+                                             MinItemHeight="220"
+                                             MinColumnSpacing="12"
+                                             MinRowSpacing="12"
+                                             Orientation="Horizontal"
+                                             ItemsJustification="Start"
+                                             ItemsStretch="None" />
+                        </ItemsRepeater.Layout>
+                    </ItemsRepeater>
+                </StackPanel>
+
+                <!-- Game Launchers Section -->
+                <StackPanel Spacing="16">
+                    <TextBlock Text="Game Launchers" Style="{ThemeResource SubtitleTextBlockStyle}" />
+                    <ItemsRepeater x:Name="LauncherGrid" ItemsSource="{x:Bind ViewModel.VisibleGameLaunchers, Mode=OneWay}"
+                                   ItemTemplate="{StaticResource InstallerCardTemplate}"
+                                   HorizontalAlignment="Left">
+                        <ItemsRepeater.Layout>
+                            <UniformGridLayout MinItemWidth="200"
+                                             MinItemHeight="220"
+                                             MinColumnSpacing="12"
+                                             MinRowSpacing="12"
+                                             Orientation="Horizontal"
+                                             ItemsJustification="Start"
+                                             ItemsStretch="None" />
+                        </ItemsRepeater.Layout>
+                    </ItemsRepeater>
+                </StackPanel>
+
+                <!-- Socials & Communication Section -->
+                <StackPanel Spacing="16">
+                    <TextBlock Text="Socials &amp; Communication" Style="{ThemeResource SubtitleTextBlockStyle}" />
+                    <ItemsRepeater x:Name="SocialGrid" ItemsSource="{x:Bind ViewModel.VisibleSocialApps, Mode=OneWay}"
+                                   ItemTemplate="{StaticResource InstallerCardTemplate}"
+                                   HorizontalAlignment="Left">
+                        <ItemsRepeater.Layout>
+                            <UniformGridLayout MinItemWidth="200"
+                                             MinItemHeight="220"
+                                             MinColumnSpacing="12"
+                                             MinRowSpacing="12"
+                                             Orientation="Horizontal"
+                                             ItemsJustification="Start"
+                                             ItemsStretch="None" />
+                        </ItemsRepeater.Layout>
+                    </ItemsRepeater>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
