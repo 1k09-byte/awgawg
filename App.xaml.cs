@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using DevWinUI;
 using Microsoft.UI.Xaml;
 using stellarisKIT.Services;
 using stellarisKIT.Native;
@@ -12,10 +13,9 @@ namespace stellarisKIT
 
         private Window? _window;
         private static Window? _windowStatic;
-        private ThemeService _themeService;
         private InstallerService _installerService;
 
-        public ThemeService ThemeService { get { return _themeService; } }
+        public IThemeService? ThemeService { get; set; }
         public InstallerService InstallerService { get { return _installerService; } }
 
         /// <summary>
@@ -40,7 +40,6 @@ namespace stellarisKIT
         public App()
         {
             InitializeComponent();
-            _themeService = new ThemeService();
             _installerService = new InstallerService();
             
             ProfileWatcher = new ProfileWatcherService(ProcessTuning, CpuSets, ThreadTuning);
@@ -61,7 +60,7 @@ namespace stellarisKIT
         {
             _window = new MainWindow();
             _windowStatic = _window;
-            ThemeService.Initialize(_window);
+            ThemeService = new ThemeService().Initialize(_window);
             _window.Activate();
         }
     }
