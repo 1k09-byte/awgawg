@@ -3,6 +3,8 @@
     x:Class="stellarisKIT.Pages.SettingsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dev="using:DevWinUI"
+    xmlns:local="using:stellarisKIT"
     xmlns:toolkit="using:CommunityToolkit.WinUI.Controls">
     <Page.Resources>
         <!-- Consistent settings layout, cloned from WinUI-Gallery Pages/SettingsPage.xaml
@@ -70,12 +72,13 @@
                     </toolkit:SettingsCard.HeaderIcon>
                     <ComboBox
                         x:Name="themeMode"
+                        dev:ThemeServiceAttach.ThemeService="{x:Bind local:App.Current.ThemeService}"
                         Width="250"
                         HorizontalAlignment="Right"
                         AutomationProperties.AutomationId="themeModeComboBox">
+                        <ComboBoxItem Content="Use system setting" Tag="Default" />
                         <ComboBoxItem Content="Light" Tag="Light" />
                         <ComboBoxItem Content="Dark" Tag="Dark" />
-                        <ComboBoxItem Content="Use system setting" Tag="Default" />
                     </ComboBox>
                 </toolkit:SettingsCard>
 
@@ -87,14 +90,15 @@
                     </toolkit:SettingsCard.HeaderIcon>
                     <ComboBox
                         x:Name="backdropMode"
+                        dev:ThemeServiceAttach.ThemeService="{x:Bind local:App.Current.ThemeService}"
                         Width="250"
                         HorizontalAlignment="Right"
                         AutomationProperties.AutomationId="backdropModeComboBox">
                         <ComboBoxItem Content="None" Tag="None" />
-                        <ComboBoxItem Content="Mica" Tag="Mica" />
-                        <ComboBoxItem Content="Mica Alt" Tag="MicaAlt" />
                         <ComboBoxItem Content="Acrylic" Tag="Acrylic" />
                         <ComboBoxItem Content="Acrylic Thin" Tag="AcrylicThin" />
+                        <ComboBoxItem Content="Mica" Tag="Mica" />
+                        <ComboBoxItem Content="Mica Alt" Tag="MicaAlt" />
                     </ComboBox>
                 </toolkit:SettingsCard>
             </StackPanel>

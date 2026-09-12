@@ -8,10 +8,6 @@
     Title="kit"
     mc:Ignorable="d">
 
-    <Window.SystemBackdrop>
-        <MicaBackdrop Kind="BaseAlt" />
-    </Window.SystemBackdrop>
-
     <Grid x:Name="RootGrid" UseLayoutRounding="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -57,10 +53,10 @@
                                     <VisualStateManager.VisualStateGroups>
                                         <VisualStateGroup x:Name="CommonStates">
                                             <VisualState x:Name="Normal">
-                                                <Storyboard>
-                                                    <ColorAnimation Storyboard.TargetName="IconPresenter" Storyboard.TargetProperty="(Control.Foreground).(SolidColorBrush.Color)" To="#d0d0d0" Duration="0:0:0.1" />
-                                                    <ColorAnimation Storyboard.TargetName="ContentTextBlock" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#d0d0d0" Duration="0:0:0.1" />
-                                                </Storyboard>
+                                                <VisualState.Setters>
+                                                    <Setter Target="IconPresenter.Foreground" Value="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                                    <Setter Target="ContentTextBlock.Foreground" Value="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                                </VisualState.Setters>
                                             </VisualState>
                                             <VisualState x:Name="PointerOver">
                                                 <Storyboard>
@@ -71,16 +67,16 @@
                                                     <DoubleAnimation Storyboard.TargetName="IconPresenter" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" To="1.06" Duration="0:0:0.15" AutoReverse="True" FillBehavior="Stop" />
                                                 </Storyboard>
                                                 <VisualState.Setters>
-                                                    <Setter Target="BackgroundPill.Background" Value="#1AFFFFFF"/>
-                                                    <Setter Target="IconPresenter.Foreground" Value="#ffffff"/>
-                                                    <Setter Target="ContentTextBlock.Foreground" Value="#ffffff"/>
+                                                    <Setter Target="BackgroundPill.Background" Value="{ThemeResource SubtleFillColorSecondaryBrush}"/>
+                                                    <Setter Target="IconPresenter.Foreground" Value="{ThemeResource TextFillColorPrimaryBrush}"/>
+                                                    <Setter Target="ContentTextBlock.Foreground" Value="{ThemeResource TextFillColorPrimaryBrush}"/>
                                                 </VisualState.Setters>
                                             </VisualState>
                                             <VisualState x:Name="Pressed">
                                                 <VisualState.Setters>
-                                                    <Setter Target="BackgroundPill.Background" Value="#3a3a3a"/>
-                                                    <Setter Target="IconPresenter.Foreground" Value="#ffffff"/>
-                                                    <Setter Target="ContentTextBlock.Foreground" Value="#ffffff"/>
+                                                    <Setter Target="BackgroundPill.Background" Value="{ThemeResource SubtleFillColorTertiaryBrush}"/>
+                                                    <Setter Target="IconPresenter.Foreground" Value="{ThemeResource TextFillColorPrimaryBrush}"/>
+                                                    <Setter Target="ContentTextBlock.Foreground" Value="{ThemeResource TextFillColorPrimaryBrush}"/>
                                                 </VisualState.Setters>
                                             </VisualState>
                                             <!-- Selected icon animation runs from code-behind
@@ -96,21 +92,21 @@
                                                     <DoubleAnimation Storyboard.TargetName="IconPresenter" Storyboard.TargetProperty="Opacity" From="1" To="0.65" Duration="0:0:0.9" AutoReverse="True" RepeatBehavior="Forever" FillBehavior="Stop" />
                                                 </Storyboard>
                                                 <VisualState.Setters>
-                                                    <Setter Target="BackgroundPill.Background" Value="#4a4a4a"/>
+                                                    <Setter Target="BackgroundPill.Background" Value="{ThemeResource SubtleFillColorSecondaryBrush}"/>
                                                     <Setter Target="IconPresenter.Foreground" Value="{ThemeResource AccentFillColorDefaultBrush}"/>
                                                     <Setter Target="ContentTextBlock.Foreground" Value="{ThemeResource AccentFillColorDefaultBrush}"/>
                                                 </VisualState.Setters>
                                             </VisualState>
                                             <VisualState x:Name="PointerOverSelected">
                                                 <VisualState.Setters>
-                                                    <Setter Target="BackgroundPill.Background" Value="#4a4a4a"/>
+                                                    <Setter Target="BackgroundPill.Background" Value="{ThemeResource SubtleFillColorTertiaryBrush}"/>
                                                     <Setter Target="IconPresenter.Foreground" Value="{ThemeResource AccentFillColorDefaultBrush}"/>
                                                     <Setter Target="ContentTextBlock.Foreground" Value="{ThemeResource AccentFillColorDefaultBrush}"/>
                                                 </VisualState.Setters>
                                             </VisualState>
                                             <VisualState x:Name="PressedSelected">
                                                 <VisualState.Setters>
-                                                    <Setter Target="BackgroundPill.Background" Value="#4a4a4a"/>
+                                                    <Setter Target="BackgroundPill.Background" Value="{ThemeResource SubtleFillColorTertiaryBrush}"/>
                                                     <Setter Target="IconPresenter.Foreground" Value="{ThemeResource AccentFillColorDefaultBrush}"/>
                                                     <Setter Target="ContentTextBlock.Foreground" Value="{ThemeResource AccentFillColorDefaultBrush}"/>
                                                 </VisualState.Setters>
@@ -125,7 +121,7 @@
                                          glides between items; no per-item indicator here. -->
 
                                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="2">
-                                        <ContentPresenter x:Name="IconPresenter" Content="{TemplateBinding Icon}" HorizontalAlignment="Center" Foreground="#d0d0d0" RenderTransformOrigin="0.5,0.5">
+                                        <ContentPresenter x:Name="IconPresenter" Content="{TemplateBinding Icon}" HorizontalAlignment="Center" Foreground="{ThemeResource TextFillColorSecondaryBrush}" RenderTransformOrigin="0.5,0.5">
                                         <ContentPresenter.RenderTransform>
                                             <TransformGroup>
                                                 <ScaleTransform />
@@ -134,7 +130,7 @@
                                             </TransformGroup>
                                         </ContentPresenter.RenderTransform>
                                         </ContentPresenter>
-                                        <TextBlock x:Name="ContentTextBlock" Text="{TemplateBinding Content}" FontSize="11" FontWeight="Medium" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="#d0d0d0" />
+                                        <TextBlock x:Name="ContentTextBlock" Text="{TemplateBinding Content}" FontSize="11" FontWeight="Medium" HorizontalAlignment="Center" TextWrapping="NoWrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
                                     </StackPanel>
                                 </Grid>
                             </ControlTemplate>
@@ -144,34 +140,49 @@
             </NavigationView.Resources>
             
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Apps" Tag="AppsPage" ToolTipService.ToolTip="Apps" Margin="0" Padding="0">
+                <NavigationViewItem Content="Apps" Tag="AppsPage" Margin="0" Padding="0">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Visibility="Collapsed" />
+                    </ToolTipService.ToolTip>
                     <NavigationViewItem.Icon>
                         <!-- Fluent System Icons, Apps 20 Filled (CC0/MIT microsoft/fluentui-system-icons). -->
                         <PathIcon Data="M4.5 17.0009C3.7203 17.0009 3.07955 16.406 3.00687 15.6454L3 15.5009V4.50092C3 3.72122 3.59489 3.08047 4.35554 3.00778L4.5 3.00092H9C9.7797 3.00092 10.4204 3.5958 10.4931 4.35646L10.5 4.50092V4.75534L12.6886 2.48609C13.2276 1.92691 14.0959 1.8766 14.6956 2.34798L14.8118 2.44922L17.5694 5.17386C18.1219 5.71976 18.1614 6.5886 17.68 7.18505L17.5767 7.30053L15.266 9.50034L15.5 9.50092C16.2797 9.50092 16.9204 10.0958 16.9931 10.8565L17 11.0009V15.5009C17 16.2806 16.4051 16.9214 15.6445 16.994L15.5 17.0009H4.5ZM9.5 10.5009H4V15.5009C4 15.7157 4.13542 15.8988 4.32553 15.9696L4.41012 15.9929L4.5 16.0009H9.5V10.5009ZM15.5 10.5009H10.5V16.0009H15.5C15.7455 16.0009 15.9496 15.824 15.9919 15.5908L16 15.5009V11.0009C16 10.7555 15.8231 10.5513 15.5899 10.509L15.5 10.5009ZM10.5 7.71034V9.50034H12.29L10.5 7.71034ZM9 4.00092H4.5C4.25454 4.00092 4.05039 4.17779 4.00806 4.41104L4 4.50092V9.50092H9.5V4.50092C9.5 4.28614 9.36458 4.10299 9.17447 4.0322L9.08988 4.00897L9 4.00092Z" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
                 
-                <NavigationViewItem Content="Drivers" Tag="DriversPage" ToolTipService.ToolTip="Drivers" Margin="0" Padding="0">
+                <NavigationViewItem Content="Drivers" Tag="DriversPage" Margin="0" Padding="0">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Visibility="Collapsed" />
+                    </ToolTipService.ToolTip>
                     <NavigationViewItem.Icon>
                         <!-- Fluent System Icons, Desktop 20 Filled (monitor = display/GPU drivers). -->
                         <PathIcon Data="M3.5 2C2.67157 2 2 2.67157 2 3.5V13.5C2 14.3284 2.67157 15 3.5 15H7V17H5.5C5.22386 17 5 17.2239 5 17.5C5 17.7761 5.22386 18 5.5 18H14.5C14.7761 18 15 17.7761 15 17.5C15 17.2239 14.7761 17 14.5 17H13V15H16.5C17.3284 15 18 14.3284 18 13.5V3.5C18 2.67157 17.3284 2 16.5 2H3.5ZM12 15V17H8V15H12Z" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
                 
-                <NavigationViewItem Content="Affinity" Tag="GamingPage" ToolTipService.ToolTip="Affinity Tune" Margin="0" Padding="0">
+                <NavigationViewItem Content="Affinity" Tag="GamingPage" Margin="0" Padding="0">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Visibility="Collapsed" />
+                    </ToolTipService.ToolTip>
                     <NavigationViewItem.Icon>
                         <!-- Fluent System Icons, Pulse 20 Filled (tuning/monitoring). -->
                         <PathIcon Data="M7.00956 3.00006C7.34232 3.0043 7.63249 3.22731 7.72222 3.54778L10.5432 13.6226L12.7848 6.52415C12.8792 6.22514 13.1497 6.01644 13.4629 6.00092C13.7761 5.9854 14.0658 6.16635 14.1894 6.45456L15.4945 9.5H17.25C17.6642 9.5 18 9.83579 18 10.25C18 10.6642 17.6642 11 17.25 11H15C14.7 11 14.4288 10.8212 14.3106 10.5454L13.6067 8.90283L11.2152 16.4758C11.1153 16.7922 10.8194 17.0054 10.4877 16.9999C10.156 16.9944 9.86723 16.7717 9.77778 16.4522L6.96609 6.41048L5.71683 10.4706C5.62001 10.7853 5.32925 11 5 11H2.75C2.33579 11 2 10.6642 2 10.25C2 9.83579 2.33579 9.5 2.75 9.5H4.44607L6.28317 3.52944C6.38103 3.21136 6.6768 2.99582 7.00956 3.00006Z" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
 
-                <NavigationViewItem Content="Threads" Tag="ThreadTunerPage" ToolTipService.ToolTip="Thread Tuner" Margin="0" Padding="0">
+                <NavigationViewItem Content="Threads" Tag="ThreadTunerPage" Margin="0" Padding="0">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Visibility="Collapsed" />
+                    </ToolTipService.ToolTip>
                     <NavigationViewItem.Icon>
                         <!-- Fluent System Icons, Branch 20 Filled. -->
                         <PathIcon Data="M5.5 2C6.88071 2 8 3.11929 8 4.5V6H13.5C14.3644 6 15.1118 6.49525 15.5413 7.21041L15.65 7.4243L17.8184 12.0125C17.9352 12.2596 18.0002 12.5293 18.0002 12.8055C18.0028 13.9213 17.1517 14.8569 16.0353 14.9926L15.8053 15C14.7061 15 13.8052 14.1083 13.8052 13.003L13.8043 12.84L12.0002 9V15.5C12.0002 16.8285 10.963 17.9157 9.65487 17.9947L9.50025 18C8.16335 18 7.06877 16.9535 7.00551 15.6322L7.00025 15.5V8H5.5C4.16335 8 3.06877 6.95353 3.00551 5.63222L3 5.5C3 4.16335 4.04647 3.06877 5.36778 3.00551L5.5 3H5.50025V4.5H7.00025V6H5.5C5.4673 6 5.4349 6.00122 5.40284 6.00363L5.35086 6.00977C5.16104 6.03756 5.09351 6.05929 5.03554 6.08272C4.54589 6.28183 4.15615 6.64303 3.93175 7.10304C3.89679 7.17466 3.86438 7.26629 3.84443 7.33088C3.82092 7.40698 3.80216 7.47895 3.79133 7.55013H4C4 7.55013 4 7.50536 4.00412 7.4586C4.019 7.28976 4.08486 7.02692 4.25056 6.78443L4.31688 6.69537C4.59473 6.34568 5.00696 6.09675 5.51865 6.00025H7C7.51169 6.09675 7.92392 6.34568 8.20177 6.69537L8.26809 6.78443C8.42398 6.99839 8.5 7.22941 8.5 7.5H4C4 7.77614 4.22386 8 4.5 8H8.5C8.77614 8 9 7.77614 9 7.5C9 7.22941 8.92398 6.99839 8.76809 6.78443L8.70177 6.69537C8.42392 6.34568 8.01169 6.09675 7.50025 6H8C9.32854 6 10.4157 7.03703 10.4947 8.34513L10.5 8.5V11H12.5C12.7761 11 13 11.2239 13 11.5C13 11.7294 12.8368 11.9213 12.6176 11.9806L12.55 12H10.5V14.5C10.5 14.7761 10.2239 15 9.95 15C9.72064 15 9.52874 14.8368 9.46939 14.6176L9.45 14.55V8C9.45 6.67157 10.487 5.5843 11.7951 5.5053L11.95 5.5H13.5C14.0006 5.5 14.4552 5.68819 14.8 5.99222L14.8872 6.08253C14.949 6.15545 15.006 6.23358 15.0577 6.31681L15.1106 6.40698L17.279 10.9951C17.3496 11.1444 17.3912 11.3093 17.4243 11.4883L17.4398 11.5834L17.4492 11.6997C17.4497 12.28 16.9956 12.7607 16.4253 12.8258L16.3353 12.833L16.1453 12.8355C15.5458 12.8355 15.0506 12.3734 15.0258 11.7828L15.0243 11.6669V8.50025H13.5002C13.2241 8.50025 13.0002 8.72411 13.0002 9.00025V13.003L13.0016 13.11C13.0416 13.5519 13.4111 13.8824 13.8564 13.9039L13.9189 13.9056H16.0354H16.0851H16.1454C16.8927 13.9056 17.5199 13.4079 17.6534 12.6933C17.7001 12.4431 17.6853 12.1878 17.6087 11.9427L17.5683 11.8219L15.4 7.23376C14.9288 6.23668 13.9183 5.56834 12.8217 5.55018L12.65 5.5H8.00025C7.96541 5.5 7.93043 5.50294 7.89552 5.5087L7.8488 5.5186L7.8488 4.5H5.50025Z" />
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Content="WS" Tag="WindowsSettingsPage" ToolTipService.ToolTip="Windows Settings" Margin="0" Padding="0">
+                <NavigationViewItem Content="WS" Tag="WindowsSettingsPage" Margin="0" Padding="0">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Visibility="Collapsed" />
+                    </ToolTipService.ToolTip>
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE713;" />
                     </NavigationViewItem.Icon>
@@ -179,7 +190,10 @@
             </NavigationView.MenuItems>
 
             <NavigationView.FooterMenuItems>
-                <NavigationViewItem Content="Settings" Tag="Settings" ToolTipService.ToolTip="Settings" Margin="0" Padding="0">
+                <NavigationViewItem Content="Settings" Tag="Settings" Margin="0" Padding="0">
+                    <ToolTipService.ToolTip>
+                        <ToolTip Visibility="Collapsed" />
+                    </ToolTipService.ToolTip>
                     <NavigationViewItem.Icon>
                         <!-- Fluent System Icons, Settings 20 Filled. -->
                         <PathIcon Data="M1.91099 7.38266C2.28028 6.24053 2.88863 5.19213 3.69133 4.30364C3.82707 4.15339 4.04002 4.09984 4.23069 4.16802L6.14897 4.85392C6.66905 5.03977 7.24131 4.76883 7.42716 4.24875C7.44544 4.19762 7.45952 4.14507 7.46925 4.09173L7.83471 2.08573C7.87104 1.88627 8.02422 1.7285 8.22251 1.6863C8.8027 1.5628 9.39758 1.5 10.0003 1.5C10.6026 1.5 11.1971 1.56273 11.7769 1.68607C11.9752 1.72824 12.1284 1.88591 12.1648 2.08529L12.5313 4.09165C12.6303 4.63497 13.1511 4.9951 13.6944 4.89601C13.7479 4.88627 13.8004 4.87219 13.8515 4.85395L15.7698 4.16802C15.9605 4.09984 16.1734 4.15339 16.3092 4.30364C17.1119 5.19213 17.7202 6.24053 18.0895 7.38266C18.1518 7.57534 18.0918 7.78658 17.9374 7.91764L16.3825 9.23773C15.9615 9.5952 15.9101 10.2263 16.2675 10.6473C16.3027 10.6887 16.3411 10.7271 16.3825 10.7623L17.9374 12.0824C18.0918 12.2134 18.1518 12.4247 18.0895 12.6173C17.7202 13.7595 17.1119 14.8079 16.3092 15.6964C16.1734 15.8466 15.9605 15.9002 15.7698 15.832L13.8515 15.1461C13.3315 14.9602 12.7592 15.2312 12.5733 15.7512C12.5551 15.8024 12.541 15.8549 12.5312 15.9085L12.1648 17.9147C12.1284 18.1141 11.9752 18.2718 11.7769 18.3139C11.1971 18.4373 10.6026 18.5 10.0003 18.5C9.39758 18.5 8.8027 18.4372 8.22251 18.3137C8.02422 18.2715 7.87104 18.1137 7.83471 17.9143L7.46926 15.9084C7.37018 15.365 6.8494 15.0049 6.30608 15.104C6.25265 15.1137 6.20011 15.1278 6.14906 15.1461L4.23069 15.832C4.04002 15.9002 3.82707 15.8466 3.69133 15.6964C2.88863 14.8079 2.28028 13.7595 1.91099 12.6173C1.84869 12.4247 1.90876 12.2134 2.06313 12.0824L3.61798 10.7623C4.03897 10.4048 4.09046 9.77373 3.73299 9.35274C3.69784 9.31135 3.65937 9.27288 3.618 9.23775L2.06313 7.91764C1.90876 7.78658 1.84869 7.57534 1.91099 7.38266ZM8.00026 10C8.00026 11.1046 8.89569 12 10.0003 12C11.1048 12 12.0003 11.1046 12.0003 10C12.0003 8.89543 11.1048 8 10.0003 8C8.89569 8 8.00026 8.89543 8.00026 10Z" />

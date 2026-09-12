@@ -16,13 +16,6 @@ namespace stellarisKIT.Pages
         public SettingsPage()
         {
             InitializeComponent();
-            stellarisKIT.App.Current.ThemeService.SetThemeComboBoxDefaultItem(themeMode);
-            stellarisKIT.App.Current.ThemeService.SetBackdropComboBoxDefaultItem(backdropMode);
-
-            // Hook events after defaults are set to prevent XAML initialization race condition
-            themeMode.SelectionChanged += themeMode_SelectionChanged;
-            backdropMode.SelectionChanged += backdropMode_SelectionChanged;
-
             Loaded += SettingsPage_Loaded;
         }
 
@@ -64,16 +57,6 @@ namespace stellarisKIT.Pages
             {
                 _syncingStartupToggle = false;
             }
-        }
-
-        private void themeMode_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            stellarisKIT.App.Current.ThemeService.OnThemeComboBoxSelectionChanged(sender);
-        }
-
-        private void backdropMode_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            stellarisKIT.App.Current.ThemeService.OnBackdropComboBoxSelectionChanged(sender);
         }
     }
 }

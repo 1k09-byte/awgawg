@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
 using stellarisKIT.Pages;
 using System;
+using System.Linq;
 using System.Runtime.InteropServices;
 using Windows.Foundation;
 using WinRT.Interop;
@@ -44,7 +45,6 @@ namespace stellarisKIT
             AppWindow.Title = "kit";
             AppWindow.TitleBar.ButtonBackgroundColor = Microsoft.UI.Colors.Transparent;
             AppWindow.TitleBar.ButtonInactiveBackgroundColor = Microsoft.UI.Colors.Transparent;
-            AppWindow.TitleBar.PreferredTheme = TitleBarTheme.Dark;
 
             // Default to Installer page and select the nav item.
             // Pill position is layout-driven (LayoutUpdated): event-driven updates
@@ -52,6 +52,17 @@ namespace stellarisKIT
             // pass when maximizing/restoring, stranding the pill on the wrong item.
             NavShell.LayoutUpdated += (_, _) => UpdateNavPill();
             NavView.SelectedItem = NavView.MenuItems[0];
+            NavView.Loaded += (_, _) => SuppressSidebarTooltips();
+            SuppressSidebarTooltips();
+        }
+
+        private void SuppressSidebarTooltips()
+        {
+            foreach (var item in System.Linq.Enumerable.OfType<NavigationViewItem>(NavView.MenuItems)
+                .Concat(System.Linq.Enumerable.OfType<NavigationViewItem>(NavView.FooterMenuItems)))
+            {
+                ToolTipService.SetToolTip(item, new ToolTip { Visibility = Visibility.Collapsed });
+            }
         }
 
         /// <summary>
